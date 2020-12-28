@@ -1,2 +1,8 @@
+* 랜덤 함수
+	Random random = new Random();
+	System.out.println(random.nextInt(10));
+	0 에서 9까지의 랜덤으로 값을 준다.
+
+
 1. 주사위 구하기 (X % 6 +1)
 	짝수 홀수 반복문을 통해 진행
