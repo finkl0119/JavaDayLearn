@@ -2,7 +2,7 @@ package Day3;
 
 import java.util.Random;
 
-public class Loop_Quiz_2 {
+public class Loop_Quiz_1_1 {
 
 	public static void main(String[] args) {
 		
