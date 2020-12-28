@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Loop_Example_2 {
 
-	//예제 3-2 for문
+	//예제 3-2 while문
 	public static void main(String[] args) {
 		
 		int count=0;
