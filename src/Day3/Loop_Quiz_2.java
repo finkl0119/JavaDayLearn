@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Loop_Quiz_2 {
 
-public static void main(String[] args) {
+	public static void main(String[] args) {
 		
 //		문자 A(65) 에서 랜덤에서 0~25값을 추출 이후에 
 //		더하기 연산을 해서 랜덤한 문자를 만든다.
