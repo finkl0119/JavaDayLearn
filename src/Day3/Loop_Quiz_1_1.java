@@ -47,7 +47,7 @@ public class Loop_Quiz_1_1 {
 		int numberInt_1 = Integer.parseInt(number_1);
 		int numberInt_2 = Integer.parseInt(number_2);
 		
-		System.out.println("최종 : " + alphabetValue.substring(numberInt_0, numberInt_0+1) +
+		System.out.println("3개 숫자에 따른 알파벳 추출 : " + alphabetValue.substring(numberInt_0, numberInt_0+1) +
 				", " + alphabetValue.substring(numberInt_1, numberInt_1+1) +
 				", " + alphabetValue.substring(numberInt_2, numberInt_2+1));
 
