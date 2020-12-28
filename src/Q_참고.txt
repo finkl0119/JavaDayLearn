@@ -7,6 +7,9 @@
 	String str = "Hello";
 	System.out.println(str.charAt(1));
 	값은 : e
+	
+	String k = str.charAt(4) + "" // 문자열로 바뀜, 더하기 연산을 하면 문자열이 제일 최상위 
+	 
 
 1. 주사위 구하기 (X % 6 +1)
 	짝수 홀수 반복문을 통해 진행
