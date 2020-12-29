@@ -35,7 +35,6 @@ public class Loop_Quiz_1_1 {
 			randomNumber = random.nextInt(10);
 			randomNumberValue += randomNumber + ""; 
 		}
-		
 		System.out.println("3개 숫자 : " + randomNumberValue);
 		
 		String number_0 = randomNumberValue.substring(0,1);
@@ -45,10 +44,11 @@ public class Loop_Quiz_1_1 {
 		int numberInt_0 = Integer.parseInt(number_0);
 		int numberInt_1 = Integer.parseInt(number_1);
 		int numberInt_2 = Integer.parseInt(number_2);
-		
+				
 		System.out.println("3개 숫자에 따른 알파벳 추출 : " + alphabetValue.substring(numberInt_0, numberInt_0+1) +
 				", " + alphabetValue.substring(numberInt_1, numberInt_1+1) +
 				", " + alphabetValue.substring(numberInt_2, numberInt_2+1));
+		
 		
 		//=====================================================================
 
@@ -67,11 +67,33 @@ public class Loop_Quiz_1_1 {
 
 		String fi = ""; 
 		for(int t=0; t<3; t++) { 
-			int j = r.nextInt(10); 
-			char kkk = temp.charAt(j); 
-			fi += kkk;     
+//			int j = r.nextInt(10); 
+//			char kkk = temp.charAt(j); 
+//			fi += kkk; 
+			fi += temp.charAt(r.nextInt(10));
 		}
 		System.out.println(fi);
+		
+		//중복방지
+		int oneindex = r.nextInt(10);
+		int twoindex = r.nextInt(10);
+		int threeindex = r.nextInt(10);
+		
+		while(oneindex == twoindex)
+		{
+			twoindex = r.nextInt(10);
+		}
+		while(oneindex == twoindex || twoindex == threeindex)
+		{
+			threeindex = r.nextInt(10);
+		}
+		
+		System.out.println(oneindex);
+		System.out.println(twoindex);
+		System.out.println(threeindex);
+		
+		String str = temp.charAt(oneindex)+"" + temp.charAt(twoindex)+"" + temp.charAt(threeindex) +"";
+		System.out.println(str);
 		
 	}
 }
