@@ -2,6 +2,17 @@ package Day3;
 
 import java.util.Scanner;
 
+/**
+ * 
+ * <pre>
+ * Day3
+ * Loop_Example_5.java
+ * </pre>
+ *
+ * @Author : '유형민'
+ * @Date   : 2020. 12. 28.	
+ *
+ */
 public class Loop_Example_5 {
 
 	//예제 3-5 continue

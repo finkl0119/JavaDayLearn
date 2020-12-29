@@ -1,5 +1,16 @@
 package Day3;
 
+/**
+ * 
+ * <pre>
+ * Day3
+ * Loop_Example_1.java
+ * </pre>
+ *
+ * @Author : '유형민'
+ * @Date   : 2020. 12. 28.	
+ *
+ */
 public class Loop_Example_1 {
 
 	//예제 3-1 for문

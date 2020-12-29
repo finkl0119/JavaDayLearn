@@ -1,7 +1,18 @@
 package Day4;
 
+/**
+ * 
+ * <pre>
+ * Day4
+ * Loop_Quiz_3.java
+ * </pre>
+ *
+ * @Author : '유형민'
+ * @Date   : 2020. 12. 29.	
+ *
+ */
 public class Loop_Quiz_3 {
-
+	
 	public static void main(String[] args) {
 		
 //		* 별 찍기 

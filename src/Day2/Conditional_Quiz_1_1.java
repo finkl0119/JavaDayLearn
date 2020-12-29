@@ -2,6 +2,17 @@ package Day2;
 
 import java.util.Scanner;
 
+/**
+ * 
+ * <pre>
+ * Day2
+ * Conditional_Quiz_1_1.java
+ * </pre>
+ *
+ * @Author : '유형민'
+ * @Date   : 2020. 12. 24.	
+ *
+ */
 public class Conditional_Quiz_1_1 {
 
 	public static void main(String[] args) {

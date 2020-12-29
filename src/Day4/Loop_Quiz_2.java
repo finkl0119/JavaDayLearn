@@ -2,6 +2,17 @@ package Day4;
 
 import java.util.Scanner;
 
+/**
+ * 
+ * <pre>
+ * Day4
+ * Loop_Quiz_2.java
+ * </pre>
+ *
+ * @Author : '유형민'
+ * @Date   : 2020. 12. 29.	
+ *
+ */
 public class Loop_Quiz_2 {
 
 	public static void main(String[] args) {

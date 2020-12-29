@@ -2,6 +2,17 @@ package Day3;
 
 import java.util.Random;
 
+/**
+ * 
+ * <pre>
+ * Day3
+ * Loop_Quiz_1_1.java
+ * </pre>
+ *
+ * @Author : '유형민'
+ * @Date   : 2020. 12. 28.	
+ *
+ */
 public class Loop_Quiz_1_1 {
 
 	public static void main(String[] args) {

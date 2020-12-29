@@ -13,9 +13,9 @@ package Day2;
  */
 public class Logical_Example {
 
-public static void main(String[] args) {
-		
-	//예제 2-7
+	public static void main(String[] args) {
+			
+		//예제 2-7
 		//비교연산
 		System.out.println('a' > 'b');
 		System.out.println(3 >= 2);

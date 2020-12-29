@@ -2,6 +2,17 @@ package Day1;
 
 import java.util.Scanner;
 
+/**
+ * 
+ * <pre>
+ * Day1
+ * Day1.java
+ * </pre>
+ *
+ * @Author : '유형민'
+ * @Date   : 2020. 12. 22.	
+ *
+ */
 public class Day1 {
 
 	public static void main(String[] args) {
