@@ -68,7 +68,7 @@ public class Loop_Quiz_2 {
 					}
 					continue;
 				}
-				//3번 입력
+				//3번 입력 시
 				if(input == 3) {
 					System.out.println("프로그램 종료 되었습니다.");
 					break;
