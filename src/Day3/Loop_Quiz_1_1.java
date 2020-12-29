@@ -42,7 +42,6 @@ public class Loop_Quiz_1_1 {
 		String number_1 = randomNumberValue.substring(1,2);
 		String number_2 = randomNumberValue.substring(2,3);
 		
-		int numberInt = Integer.parseInt(randomNumberValue);
 		int numberInt_0 = Integer.parseInt(number_0);
 		int numberInt_1 = Integer.parseInt(number_1);
 		int numberInt_2 = Integer.parseInt(number_2);
@@ -50,6 +49,29 @@ public class Loop_Quiz_1_1 {
 		System.out.println("3개 숫자에 따른 알파벳 추출 : " + alphabetValue.substring(numberInt_0, numberInt_0+1) +
 				", " + alphabetValue.substring(numberInt_1, numberInt_1+1) +
 				", " + alphabetValue.substring(numberInt_2, numberInt_2+1));
+		
+		//=====================================================================
 
+		Random r = new Random();
+		char a = 'A';
+		
+		String temp = "";
+		
+		for(int i =0;i<10;i++)
+		{
+			int b = r.nextInt(26);
+			char x = (char) (a+b);
+			temp += x;
+		}
+		System.out.println(temp);
+
+		String fi = ""; 
+		for(int t=0; t<3; t++) { 
+			int j = r.nextInt(10); 
+			char kkk = temp.charAt(j); 
+			fi += kkk;     
+		}
+		System.out.println(fi);
+		
 	}
 }
