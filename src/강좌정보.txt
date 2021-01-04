@@ -1,5 +1,7 @@
 * 온라인 강의 주소 : 
 	https://us02web.zoom.us/j/5797296981?pwd=UGJJMSswM0EzUVQwbWRNVmFZT3Jqdz09
+	password: UGJJMSswM0EzUVQwbWRNVmFZT3Jqdz09
+	
     https://us02web.zoom.us/wc/5797296981/join?track_id=&jmf_code=&meeting_result=&tk=&cap=undefined&refTK=&wpk=wcpkcb5b09d0eff2c3691eb21c5332124b87
 
 * java jdk download : 
