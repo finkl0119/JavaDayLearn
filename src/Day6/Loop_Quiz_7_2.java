@@ -3,9 +3,32 @@ package Day6;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * 
+ * <pre>
+ * Day6
+ * Loop_Quiz_7_2.java
+ * </pre>
+ *
+ * @Author : '유형민'
+ * @Date   : 2021. 1. 4.	
+ *
+ */
 public class Loop_Quiz_7_2 {
 
 	public static void main(String[] args) {
+		
+//		 10 - 2
+//		* 변수만을 이용한 숫자 야구 게임
+//		 자리수 3개 일치 여부에 따라 
+//		 홈런입니다 / 2Strike / 3B / OUT입니다
+		
+//		컴퓨터가 3개의 1~9까지의 다른숫자가 변수에 담겨있습니다.
+//		숫자야구게임을 시작합니다.
+//		첫번째 숫자를 입력하세요. : 5
+//		두번째 숫자를 입력하세요. : 4
+//		세번째 숫자를 입력하세요. : 2
+//		out / 1, 2 strike / 1,2,3 ball / 홈런
 		
 		boolean gameStart = true;
 		
@@ -22,18 +45,6 @@ public class Loop_Quiz_7_2 {
 		
 		int strike = 0;
 		int ball = 0;
-		
-//		 10 - 2
-//		* 변수만을 이용한 숫자 야구 게임
-//		 자리수 3개 일치 여부에 따라 
-//		 홈런입니다 / 2Strike / 3B / OUT입니다
-		
-//		컴퓨터가 3개의 1~9까지의 다른숫자가 변수에 담겨있습니다.
-//		숫자야구게임을 시작합니다.
-//		첫번째 숫자를 입력하세요. : 5
-//		두번째 숫자를 입력하세요. : 4
-//		세번째 숫자를 입력하세요. : 2
-//		out / 1, 2 strike / 1,2,3 ball / 홈런
 		
 		while(gameStart) {
 			
