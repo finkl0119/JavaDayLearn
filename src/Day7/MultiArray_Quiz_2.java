@@ -1,7 +1,5 @@
 package Day7;
 
-import java.util.Scanner;
-
 /**
  * 
  * <pre>
@@ -46,73 +44,182 @@ public class MultiArray_Quiz_2 {
 //		2차원 배열 5x5에 
 //		조건문과 반복문을 통해	배열 채우기
 	
+		//========================================
+		System.out.println("===== 15-1 문제 =====");
 		
-		int[][] lineArray = new int[1][5];
-		int[][] rowArray = new int[5][1];
-		int[][] intArray = new int[5][5];
-		int backNumber = 1;
-		int plusNumber = 1;
+		int[][] lineArray_0 = new int[1][5];
+		int[][] rowArray_0 = new int[5][1];
+		int[][] intArray_0 = new int[5][5];
 		
-		int lineNumber = 0;
-		int rowNumber = 0;
+		int plusNumber_0 = 1;
+		int lineNumber_0 = 0;
+		int rowNumber_0 = 0;
 		
-		for(int i=0; i<1; i++) {
-			for(int j=0; j<5; j++) {
-				lineArray[i][j] = lineNumber;
-				lineNumber = lineNumber + 1;
+		//가로
+		for(int i=0; i<lineArray_0.length; i++) {
+			for(int j=0; j<lineArray_0[0].length; j++) {
+				lineArray_0[i][j] = lineNumber_0;
+				lineNumber_0 = lineNumber_0 + 1;
 			}
 		}
 		
-		for(int i=0; i<1; i++) {
-			for(int j=0; j<5; j++) {
-				System.out.printf("%2d ", lineArray[i][j]);
+		//세로
+		for(int i=0; i<rowArray_0.length; i++) {
+			for(int j=0; j<rowArray_0[0].length; j++) {
+				rowArray_0[i][j] = rowNumber_0;
+				rowNumber_0 = rowNumber_0 + 1;
 			}
 		}
 		
-		for(int i=0; i<5; i++) {
-			for(int j=0; j<1; j++) {
-				rowArray[i][j] = rowNumber;
-				rowNumber = rowNumber + 1;
+		//내부로직
+		for(int i=0; i<intArray_0.length; i++){
+			for(int j=0; j<intArray_0[0].length; j++){
+				intArray_0[i][j] = plusNumber_0;
+				plusNumber_0 = plusNumber_0 + 1;
 			}
 		}
 		
-		for(int i=0; i<5; i++) {
-			for(int j=0; j<1; j++) {
-				System.out.println(rowArray[i][j]);
+		System.out.print("   ");
+		
+		for(int i=0; i<lineArray_0.length; i++) {
+			for(int j=0; j<lineArray_0[0].length; j++) {
+				System.out.printf("%2d ", lineArray_0[i][j]);
 			}
 		}
-		
-		
-		for(int i=0; i<intArray.length; i++){
-			if(backNumber == 1){
-				for(int j=0; j<intArray.length; j++){
-					intArray[i][j] = plusNumber;
-					plusNumber = plusNumber + 1;
-				}
-			}else{
-				for(int j=intArray.length-1; j>=0; j--){
-					intArray[i][j] = plusNumber;
-					plusNumber = plusNumber + 1;
-				}
-			}
-			backNumber = backNumber * (-1);
-		}
-			
-		for(int i=5; i<0; i--) {
-			for(int j=0; j<1; j++) {
-				System.out.printf("%2d ", rowArray[i][j]);
-			}
-		}
-		
 		System.out.println();
 		
-		for(int i=0; i<5; i++){
-			for(int j=0; j<5; j++){
-				System.out.printf("%2d ", intArray[i][j]);
+		for(int i=0; i<intArray_0.length; i++){
+			for(int j=0; j<rowArray_0[0].length; j++) {
+				System.out.printf("%2d ",rowArray_0[i][j]);
+			}
+			for(int j=0; j<intArray_0[0].length; j++){
+				System.out.printf("%2d ", intArray_0[i][j]);
+			}
+			System.out.println();
+		}
+		System.out.println();
+		
+		//========================================
+		
+		System.out.println("===== 15-2 문제 =====");
+		
+		int[][] lineArray_1 = new int[1][5];
+		int[][] rowArray_1 = new int[5][1];
+		int[][] intArray_1 = new int[5][5];
+		
+		int backNumber_1 = 1;
+		int plusNumber_1 = 1;
+		int lineNumber_1 = 0;
+		int rowNumber_1 = 0;
+		
+		//가로
+		for(int i=0; i<lineArray_1.length; i++) {
+			for(int j=0; j<lineArray_1[0].length; j++) {
+				lineArray_1[i][j] = lineNumber_1;
+				lineNumber_1 = lineNumber_1 + 1;
+			}
+		}
+		
+		//세로
+		for(int i=0; i<rowArray_1.length; i++) {
+			for(int j=0; j<rowArray_1[0].length; j++) {
+				rowArray_1[i][j] = rowNumber_1;
+				rowNumber_1 = rowNumber_1 + 1;
+			}
+		}
+		
+		//내부로직
+		for(int i=0; i<intArray_1.length; i++){
+			if(backNumber_1 == 1){
+				for(int j=0; j<intArray_1[0].length; j++){
+					intArray_1[i][j] = plusNumber_1;
+					plusNumber_1 = plusNumber_1 + 1;
+				}
+			}else{
+				for(int j=intArray_1.length-1; j>=0; j--){
+					intArray_1[i][j] = plusNumber_1;
+					plusNumber_1 = plusNumber_1 + 1;
+				}
+			}
+			backNumber_1 = backNumber_1 * (-1);
+		}
+		
+		System.out.print("   ");
+		
+		for(int i=0; i<lineArray_1.length; i++) {
+			for(int j=0; j<lineArray_1[0].length; j++) {
+				System.out.printf("%2d ", lineArray_1[i][j]);
+			}
+		}
+		System.out.println();
+		
+		for(int i=0; i<rowArray_1.length; i++){
+			for(int j=0; j<rowArray_1[0].length; j++) {
+				System.out.printf("%2d ",rowArray_1[i][j]);
+			}
+			for(int j=0; j<intArray_1[0].length; j++){
+				System.out.printf("%2d ", intArray_1[i][j]);
 			}
 			System.out.println();
 		}
 			
+		System.out.println();
+		
+		//========================================
+		
+		System.out.println("===== 15-3 문제 =====");
+		
+		int[][] lineArray_2 = new int[1][5];
+		int[][] rowArray_2 = new int[5][1];
+		int[][] intArray_2 = new int[5][5];
+		
+		int plusNumber_2 = 1;
+		int lineNumber_2 = 0;
+		int rowNumber_2 = 0;
+		
+		//가로
+		for(int i=0; i<lineArray_2.length; i++) {
+			for(int j=0; j<lineArray_2[0].length; j++) {
+				lineArray_2[i][j] = lineNumber_2;
+				lineNumber_2 = lineNumber_2 + 1;
+			}
+		}
+		
+		//세로
+		for(int i=0; i<rowArray_2.length; i++) {
+			for(int j=0; j<rowArray_2[0].length; j++) {
+				rowArray_2[i][j] = rowNumber_2;
+				rowNumber_2 = rowNumber_2 + 1;
+			}
+		}
+		
+		//내부로직
+		for(int i=intArray_2.length-1; i>=0; i--){
+			for(int j=0; j<intArray_2[0].length; j++){
+				intArray_2[j][i] = plusNumber_2;
+				plusNumber_2 = plusNumber_2 + 1;
+			}
+		}
+		
+		System.out.print("   ");
+		
+		for(int i=0; i<lineArray_2.length; i++) {
+			for(int j=0; j<lineArray_2[0].length; j++) {
+				System.out.printf("%2d ", lineArray_2[i][j]);
+			}
+		}
+		System.out.println();
+		
+		for(int i=0; i<intArray_2.length; i++){
+			for(int j=0; j<rowArray_2[0].length; j++) {
+				System.out.printf("%2d ",rowArray_2[i][j]);
+			}
+			for(int j=0; j<intArray_2[0].length; j++){
+				System.out.printf("%2d ", intArray_2[i][j]);
+			}
+			System.out.println();
+		}
+		System.out.println();	
 	}
 	
 }

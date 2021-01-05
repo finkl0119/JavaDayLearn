@@ -23,7 +23,7 @@ public class Array_Example_3 {
 		String names[] = {"사과", "배","바나나", "체리","딸기", "포도"};
 		
 		int sum = 0;
-		for(int k:n) {
+		for(int k : n) {
 			System.out.print(k+ " ");
 			sum +=k;
 		}
