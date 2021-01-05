@@ -7,7 +7,7 @@ import java.util.Scanner;
  * 
  * <pre>
  * Day6
- * Array_Quiz_1.java
+ * Array_Quiz_2.java
  * </pre>
  *
  * @Author : '유형민'
