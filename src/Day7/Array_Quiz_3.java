@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * 
  * <pre>
- * Day6
+ * Day7
  * Array_Quiz_3.java
  * </pre>
  *
