@@ -42,7 +42,7 @@ public class MultiArray_Quiz_1 {
 		int lineNumber; 
 		int rowNumber;
 		int reserveComplete = 18;
-		int intArray[][] = new int [9][2];
+		int intArray[][] = new int [9][2]; 
 		
 		Scanner scanner = new Scanner(System.in);
 		
@@ -55,12 +55,15 @@ public class MultiArray_Quiz_1 {
 				
 				if ((lineNumber > 9 || lineNumber < 1) || (rowNumber > 2 || rowNumber < 1)){
 					System.out.println("잘못된 입력 입니다.");
+					System.out.println();
 					continue;
 				} else if (intArray[lineNumber-1][rowNumber-1] == 0) {
+					//값은 10 9 8 이렇게 가기 때문에
 					System.out.println("예약 완료 되었습니다.");
 					intArray[lineNumber-1][rowNumber-1] = 1;
 					reserveComplete --;
 					System.out.println("예약이 "+ reserveComplete + "건 남았습니다.");
+					System.out.println();
 				} else {
 					System.out.println("다시 예약해주세요.");
 					for(int i=0; i<9; i++) {
@@ -70,9 +73,10 @@ public class MultiArray_Quiz_1 {
 							}
 						}
 					}
+					System.out.println();
 				}	
 			}else {
-				System.out.println("예약 종료 되었습니다.");
+				System.out.println("예약 끝났습니다.");
 				break;
 			}
 			
