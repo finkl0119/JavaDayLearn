@@ -42,7 +42,7 @@ public class MultiArray_Quiz_1 {
 		int lineNumber; 
 		int rowNumber;
 		int reserveComplete = 18;
-		int intArray[][] = new int [9][2]; 
+		int intArray[][] = new int[9][2]; 
 		
 		Scanner scanner = new Scanner(System.in);
 		

@@ -219,7 +219,82 @@ public class MultiArray_Quiz_2 {
 			}
 			System.out.println();
 		}
-		System.out.println();	
+		System.out.println();
+		
+		//========================================
+		
+		System.out.println("15-2 문제 정보처리기사 실기");
+		
+		int[][] array = new int[5][5]; // 5x5행
+		int R, C, TR, START, END, SW, K; //변수 선언
+		TR = 0; // 시작에 대한 변수 
+		START = 0; // 초기값
+		END=4; // 마지막 값 
+		SW=1; // 
+		K=0; // 
+		for(R=0;R!=5;R++) //시작
+		{
+			for(C=START;C!=(END+SW);C+=SW) 
+				// 0부터 5와 일치하지 않은 경우까지 C = C+SW 그러나 SW : -1 씩 감소
+			{
+				K++; //값을 더한다.
+				array[R][C] = K; // 그값을 배열에 대입한다.
+			}
+			TR = START; //
+			START = END; //
+			END = TR; //
+			SW = SW*(-1); //지그재그 
+		}
+		
+		for(int i = 0;i<5;i++)
+		{
+			for(int j =0;j<5;j++)
+			{
+				System.out.printf("%d\t",array[i][j]);
+			}
+			System.out.println();
+		}
+		System.out.println();
+
+		
+		//========================================
+		
+		System.out.println("15-1 문제 정보처리기사 실기");
+		
+		int[][] one = new int [5][5];
+		int value = 1;
+		for(int i=0; i<one.length; i++)
+		{
+			for(int j=0; j<one[i].length; j++)
+			{
+				one[i][j] = value;
+				value++;
+			}
+			System.out.println();
+		}
+
+		
+		System.out.println("15-3 문제 정보처리기사 실기");		
+		
+		int[][] arr2 = new int[5][5];
+
+		for (int i = 0; i < 5; i++) {
+			for (int j = 4; j >= 0; j--) {
+				arr2[i][4 - j] = one[j][i]; //00 -> 40 / 01 -> 30  
+			}
+		}
+		
+		for(int i = 0;i<5;i++)
+		{
+			for(int j =0;j<5;j++)
+			{
+				System.out.printf("%d\t",arr2[i][j]);
+			}
+			System.out.println();
+		}
+
 	}
+	
+	
 	
 }

@@ -39,6 +39,17 @@ public class Array_Example_3 {
 		}
 		System.out.println();
 		
+		
+		//foreach 문
+		int c[][][] = new int [3][2][1];
+		for(int intArray_0[][] : c) {
+			for(int intArray_1[] : intArray_0) {
+				for(int intArray_2 : intArray_1) {
+					
+				}
+			}
+		}
+		
 	}
 	
 }
