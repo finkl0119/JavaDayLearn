@@ -47,6 +47,14 @@ public class MultiArray_Quiz_2 {
 		//========================================
 		System.out.println("===== 15-1 문제 =====");
 		
+//		15-1 문제 
+//		   0  1  2  3  4 
+//		0  1  2  3  4  5 	
+//		1  6  7  8  9  10
+//		2  11 12 13 14 15
+//		3  16 17 18 19 20
+//		4  21 22 23 24 25
+		
 		int[][] lineArray_0 = new int[1][5];
 		int[][] rowArray_0 = new int[5][1];
 		int[][] intArray_0 = new int[5][5];
@@ -102,6 +110,14 @@ public class MultiArray_Quiz_2 {
 		//========================================
 		
 		System.out.println("===== 15-2 문제 =====");
+		
+//		15-2 문제
+//		   0  1  2  3  4 
+//		0  1  2  3  4  5 	
+//		1  10 9  8  7  6
+//		2  11 12 13 14 15
+//		3  20 19 18 17 16
+//		4  21 22 23 24 25
 		
 		int[][] lineArray_1 = new int[1][5];
 		int[][] rowArray_1 = new int[5][1];
@@ -168,6 +184,14 @@ public class MultiArray_Quiz_2 {
 		//========================================
 		
 		System.out.println("===== 15-3 문제 =====");
+		
+//		15-3 문제
+//		   0  1  2  3  4 
+//		0  21 16 11 6  1 	
+//		1  22 17 12 7  2
+//		2  23 18 13 8  3
+//		3  24 19 14 9  4
+//		4  25 20 15 10 5	
 		
 		int[][] lineArray_2 = new int[1][5];
 		int[][] rowArray_2 = new int[5][1];
@@ -294,7 +318,5 @@ public class MultiArray_Quiz_2 {
 		}
 
 	}
-	
-	
 	
 }
