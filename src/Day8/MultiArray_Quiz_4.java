@@ -68,6 +68,7 @@ public class MultiArray_Quiz_4 {
 		int rowCasting = scanner.nextInt();
 		
 		if ((lakeArray[lineCasting][rowCasting] == lakeArray[lineRandom][rowRandom])) {
+			lakeArray[lineCasting][rowCasting] = 0;
 			fishNumber--;
 			System.out.println("물고기를 잡았습니다." + fishNumber+ "마리 남았습니다.");
 			System.out.println();
@@ -130,30 +131,28 @@ public class MultiArray_Quiz_4 {
 					}else {
 						System.out.println("현재 낚시바늘 위치는 " + "[" + lineCasting + "]" + "[" + rowCasting + "] 입니다.");
 					}
+				} else {
+					System.out.println("번호를 잘못입력하였습니다.");
+					continue;
 				}
 				
 				//물고기 잡았을 경우
 				if(lakeArray[lineCasting][rowCasting] == 1) {
 					lakeArray[lineCasting][rowCasting] = 0;
 					fishNumber--;
-					System.out.println("물고기를 잡았습니다." + fishNumber+ "마리 남았습니다.");
+					System.out.println("물고기를 잡았습니다." + fishNumber + "마리 남았습니다.");
 					System.out.println();
+					//물고기 3마리 모두 잡은 경우
+					if(fishNumber == 0) {
+						System.out.println("물고기 3마리를 모두 잡았습니다.");
+						System.out.println("프로그램을 종료합니다.");
+						System.out.println();
+						break;
+					}
 					continue;
 				}
-				//물고기 3마리 모두 잡은 경우
-				if(fishNumber == 0) {
-					System.out.println("물고기 3마리를 모두 잡았습니다.");
-					System.out.println("프로그램을 종료합니다.");
-					System.out.println();
-					break;
-				}
 			}
-			
 		}
-		
-		
-		
-		
-	}
 	
+	}
 }

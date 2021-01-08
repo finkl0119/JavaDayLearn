@@ -18,6 +18,8 @@ public class MultiArray_Quiz_3 {
 		//========================================
 		
 		System.out.println("===== 15-4 문제 =====");	
+
+//		달팽이
 		
 //		1  2  3  4  5
 //		16 17 18 19 6
@@ -78,13 +80,13 @@ public class MultiArray_Quiz_3 {
 		
 		System.out.println("===== 15-5 문제 =====");	
 		
+//		마방진
+		
 //		17 24  1  8 15
 //		23  5  7 14 16
 //		 4  6 13 20 22
 //		10 12 19 21	 3
 //		11 18 25  2  9
-		
-// Tip : 5이후엔 다음 행 +1
 		
 		int intArray_4[][] = new int[5][5];
 		
@@ -117,6 +119,42 @@ public class MultiArray_Quiz_3 {
 		}
 		System.out.println();	
 		
-	}
-	
+		//==============================================
+		
+		int arr[][] = new int [5][5];
+		int x = 0;
+		int y = 2;
+		int count = 1;
+		
+		while(count < 26){
+			arr[x][y] = count;
+			
+			int nx = x  - 1;
+			int ny = y  + 1;
+			
+			if(nx == -1){
+				nx = 4;
+			}
+			if(ny == 5){
+				ny = 0;
+			}
+			
+			if(arr[nx][ny] == 0){
+				x = nx;
+				y = ny;
+			}
+			else{
+				x = x +1;
+			}
+			count++;
+		}
+		
+		for(int i = 0;i<5;i++) {
+			for(int j =0;j<5;j++) {
+				System.out.printf("%d\t",arr[i][j]);
+			}
+			System.out.println();
+		}
+
+	}	
 }
