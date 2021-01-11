@@ -5,12 +5,12 @@ import java.util.Scanner;
 /**
  * 
  * <pre>
- * Day8
- * MultiArray_Quiz_3.java
+ * Day9
+ * Function_Quiz_1.java
  * </pre>
  *
  * @Author : '유형민'
- * @Date   : 2021. 1. 6.	
+ * @Date   : 2021. 1. 8.	
  *
  */
 public class Function_Quiz_1 {
@@ -34,7 +34,7 @@ public class Function_Quiz_1 {
 //	  2. 곱하기 연산 (2번)
 //	  3. 빼기 연산 (3번)
 //	  4. 나누기 연산 (4번)
-//	  5. 츨력 / 잘못된 출력 (2번, 4번)
+//	  5. 츨력 / 잘못된 출력 (2번/4번)
 //	  6. 입력 (3번)
 	  
 		Scanner sc = new Scanner(System.in);
@@ -79,26 +79,26 @@ public class Function_Quiz_1 {
 		int b = input2();
 		divResult((double)a / (double)b);
 	}
-	//결과값 출력값
+	//결과값 출력값 2번으로
 	public static void result(int res){
 		System.out.printf("결과값 : %d입니다.", res);
 	}
-	//나눗셈 출력값
+	//나눗셈 출력값 2번으로
 	public static void divResult(double res){
 		System.out.printf("나눗셈 결과값 : %.1f입니다.",res);
 	}
-	//에러 출력값
+	//에러 출력값 4번으로
 	public static void err(){
 		System.out.println("잘못된 입력값입니다.");
 	}
-	//입력값_1
+	//입력값_1 3번으로
 	public static int input1(){
 		Scanner sc = new Scanner(System.in);
 		System.out.println("숫자1을 입력해주세요.");
 		int calculator_1 = sc.nextInt();
 		return calculator_1;
 	}
-	//입력값_2
+	//입력값_2 3번으로
 	public static int input2(){
 		Scanner sc = new Scanner(System.in);
 		System.out.println("숫자2를 입력해주세요.");
