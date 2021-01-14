@@ -58,6 +58,7 @@ public class MultiArray_Quiz_4 {
 			System.out.print("[" + lineRandom + "]" + "[" + rowRandom + "] / ");
 			lakeArray[lineRandom][rowRandom] = 1;
 		}
+		
 		System.out.println();
 		System.out.println();
 		System.out.println("=== 낚시 게임을 시작합니다. ===");
