@@ -1,0 +1,41 @@
+* 13일차 수업
+
+클래스 : 붕어빵틀 설계도면
+객체 : 붕어빵 자동차
+
+class A {
+	//속성(데이터)
+	int a;
+	String str;
+	//메소드(함수)
+	void abc(){
+	
+	}
+}	
+
+A a = new A();	
+
+//============================================
+
+has 관계 
+class Cpu {
+
+}		
+
+class Memory{
+
+{
+
+class HardDisk{
+
+}
+
+class Computer{
+	Cpu c;
+	Memory m;
+	HardDisk h;
+}
+
+
+
+

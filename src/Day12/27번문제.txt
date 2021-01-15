@@ -1,0 +1,112 @@
+package Day13;
+
+class Car{
+	String color;
+	String maker;
+	int maxSpeed;
+	void riding()
+	{
+		System.out.println(color+"의 "+maker+"차를 최고속도 "+maxSpeed+"km/h로 운전합니다");
+	}
+}
+
+class Bike{
+	String maker;
+	String function;
+	void riding()
+	{
+		System.out.println(function+"기능을 가지 "+maker+" 자전거를 운전합니다");
+	}
+}
+
+class Motorcycle{
+	String color;
+	String maker;
+	int maxSpeed;
+	void riding()
+	{
+		System.out.println(color+"의 "+maker+"오토바이를 최고속도 "+maxSpeed+"km/h로 운전합니다");
+	}
+}
+
+class Whole{
+	Car car1 = new Car();
+	Car car2 = new Car();
+	Car car3 = new Car();
+	Car car4 = new Car();
+	Bike bike1 = new Bike();
+	Bike bike2 = new Bike();
+	Motorcycle motorcycle = new Motorcycle(); 
+}
+
+class Person1{
+	Car c1 ;
+	Car c2 ;
+	void driving(Car c){
+		c.riding();
+	}
+}
+class Person2{
+	Bike b;
+	Motorcycle m;
+	void driving(Bike b){
+		b.riding();
+	}
+	void driving(Motorcycle m){
+		m.riding();
+	}
+}
+
+public class test27 {
+	public static void main(String[] args) {
+		////////////////////////////////////27번문제
+		Whole w = new Whole();
+		Person1 a = new Person1();
+		Person2 b = new Person2();
+		
+		//w.car1.color = "은색";
+		
+		w.car1.color="은색";
+		w.car2.color="검정색";
+		w.car3.color="하얀색";
+		w.car4.color="형광색";
+		
+		w.car1.maker="Ford";
+		w.car2.maker="BMW";
+		w.car3.maker="삼성";
+		w.car4.maker="현대";
+		
+		w.car1.maxSpeed=220;
+		w.car2.maxSpeed=220;
+		w.car3.maxSpeed=220;
+		w.car4.maxSpeed=220;
+		
+		w.bike1.maker = "삼천리";
+		w.bike2.maker = "자이언트";
+		
+		w.bike1.function = "산악용";
+		w.bike2.function = "접이식용";
+		
+		w.motorcycle.color = "빨간색";
+		w.motorcycle.maker= "대림";
+		w.motorcycle.maxSpeed = 180;
+		
+		
+
+		a.c1 = w.car2;
+		a.c2 = w.car4;
+
+		
+		b.b = w.bike1;
+		b.m = w.motorcycle;
+		
+
+		a.driving(a.c1);
+		a.driving(a.c2);
+
+		b.driving(b.b);
+		b.driving(b.m);
+
+
+	}
+}
