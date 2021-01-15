@@ -1,5 +1,7 @@
 package Day13;
 
+import java.util.Scanner;
+
 class AnimalClass{
 
 	String animal;
@@ -9,6 +11,22 @@ class AnimalClass{
 		System.out.println(animal + " 동물이 " + food + "를 들고 있습니다.");
 	}
 
+	String animalInput(){
+		
+		Scanner scanner = new Scanner(System.in);
+		String animal = scanner.next();
+		
+		return animal;
+	}
+	
+	String foodInput(){
+		
+		Scanner scanner = new Scanner(System.in);
+		String food = scanner.next();
+		
+		return food;
+	}
+	
 }
 
 public class ClassQuiz03 {
