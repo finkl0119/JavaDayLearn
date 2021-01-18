@@ -14,6 +14,8 @@ class AnimalClass{
 	String animalInput(){
 		
 		Scanner scanner = new Scanner(System.in);
+		
+		System.out.printf("동물을 입력해주세요. : " );
 		String animal = scanner.next();
 		
 		return animal;
@@ -22,6 +24,8 @@ class AnimalClass{
 	String foodInput(){
 		
 		Scanner scanner = new Scanner(System.in);
+		
+		System.out.printf("음식을 입력해주세요. : " );
 		String food = scanner.next();
 		
 		return food;
@@ -54,47 +58,31 @@ public class ClassQuiz03 {
 //		그리고 나서는 어떤 동물이 어떤 음식을 들고있는지 출력을 해주면 됩니다.
 		
 		AnimalClass animalClass1 = new AnimalClass();
-		animalClass1.animal = "원숭이";
-		animalClass1.food = "바나나";
+		animalClass1.animal = animalClass1.animalInput();
+		animalClass1.food = animalClass1.foodInput();
+		animalClass1.animalInit(animalClass1.animal, animalClass1.food);
 		
 		AnimalClass animalClass2 = new AnimalClass();
-		animalClass2.animal = "개";
-		animalClass2.food = "뼈다귀";
-		
+		animalClass2.animal = animalClass2.animalInput();
+		animalClass2.food = animalClass2.foodInput();
+		animalClass2.animalInit(animalClass2.animal, animalClass2.food);
+
 		AnimalClass animalClass3 = new AnimalClass();
-		animalClass3.animal="닭";
-		animalClass3.food="모이";
+		animalClass3.animal = animalClass3.animalInput();
+		animalClass3.food = animalClass3.foodInput();
+		animalClass3.animalInit(animalClass3.animal, animalClass3.food);
 		
 		AnimalClass animalClass4 = new AnimalClass();
-		animalClass4.animal="돼지";
-		animalClass4.food="여물";
-		
-		animalClass1.animalInit(animalClass1.animal, animalClass1.food);
-		animalClass2.animalInit(animalClass2.animal, animalClass2.food);
-		animalClass3.animalInit(animalClass3.animal, animalClass3.food);
+		animalClass4.animal = animalClass4.animalInput();
+		animalClass4.food = animalClass4.foodInput();
 		animalClass4.animalInit(animalClass4.animal, animalClass4.food);
 		
 		System.out.println();
-		System.out.println(" === 옆 동물에게 전달 ===");
-		
-		animalClass1.animal = animalClass1.animal; 
-		animalClass1.food = animalClass2.food; 
-		animalClass1.animalInit(animalClass1.animal, animalClass1.food);
-		
-		animalClass2.animal = animalClass2.animal; 
-		animalClass2.food = animalClass3.food; 
-		animalClass2.animalInit(animalClass2.animal, animalClass2.food);
-		
-		animalClass3.animal = animalClass3.animal; 
-		animalClass3.food = animalClass4.food; 
-		animalClass3.animalInit(animalClass3.animal, animalClass3.food);
-
-		animalClass4.animal = animalClass4.animal; 
-		animalClass4.food = animalClass1.food; 
-		animalClass4.animalInit(animalClass4.animal, animalClass4.food);
+		animalClass1.animalInit(animalClass1.animal, animalClass2.food);
+		animalClass2.animalInit(animalClass2.animal, animalClass3.food);
+		animalClass3.animalInit(animalClass3.animal, animalClass4.food);
+		animalClass4.animalInit(animalClass4.animal, animalClass1.food);
 		
 	}	
-	
-	
 	
 }

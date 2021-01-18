@@ -32,25 +32,22 @@ class GameStart {
 	Win win = new Win();
 	Draw draw = new Draw();
 	Lose lose = new Lose();
+
+	Integer person;
 	
-	Integer hand;
-    
-	Scanner scanner = new Scanner(System.in);
-	public int user() {
+	int user() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("1.가위, 2.바위, 3.보 를 내주세요. : ");
+		person = scanner.nextInt();
 		
-		while(hand < 1 || hand > 3) {
-			System.out.print("1. 가위 / 2. 바위 / 3.보);");
-            hand = scanner.nextInt();
-		}
-        return hand;
+        return person;
     }
 	
-	Random random = new Random();
-    public int com() {
+    int com() {
+    	Random random = new Random();
         return random.nextInt(3)+1;
     }
-	
-    
+
 }
 
 public class ClassQuiz04 {
@@ -72,35 +69,50 @@ public class ClassQuiz04 {
 //		누가 승리인지 main문에서 분기를 해주세요.
 		
 		Scanner scanner = new Scanner(System.in);
-		GameStart user = new GameStart();
-		GameStart com = new GameStart();
+		GameStart gameStart = new GameStart();
        
-		int again = 0;
+		int again = 1;
         while(again == 1) {
-        	int computer = com.com();
+        	
+        	System.out.print("1. 게임시작 2. 종료 : ");
+			int select_0 = scanner.nextInt();
+        	
+			if((select_0 < 3) && (select_0 > 0)) {
+				
+				if(select_0 == 1) {
+					int userPerson = gameStart.user();
+		        	int computer = gameStart.com();
+		            
+		        	if(userPerson < 3 && userPerson > 0) {
+		        		int result = (userPerson - computer + 3) % 3;
+		 	            switch(result) {
+			 	            case 0: gameStart.win.winInput();
+			 	            		break;
+			 	            case 1: gameStart.lose.loseInput();
+			 	            		break;
+			 	            case 2: gameStart.draw.drawInput();
+			 	            		break;
+		 	            }
+		        	}else {
+		        		System.out.println("입력값을 초과하였습니다.");
+		        		continue;
+		        	}
+		           
+		            while(again != 0 && again != 1) {
+			        	
+			        	 System.out.print("다시 한번 하시겠습니까? 1.아니오 2. 예 : ");
+			        	 again = scanner.nextInt();
+			        }
+				}else {
+					System.out.println("종료합니다. ");
+					break;
+				}
+			}else {
+				System.out.println("번호를 다시 선택해주세요.");
+				continue;
+			}
+        	
 
-            // 사람의 손 생성
-            int userPerson = user.user();
-
-            // 양쪽 손을 표시
-            System.out.println("컴퓨터는 "+ computer+"이고, 당신은 "+ userPerson+" 입니다.");
-            
-            //판정
-            
-            int result = (userPerson - computer + 3) %3;
-	            switch(result) {
-	            case 0: System.out.println("비겼습니다.");break;
-	            case 1: System.out.println("당신이 졌습니다.");break;
-	            case 2: System.out.println("당신이 이겼습니다.");break;
-            }
-            while(again != 0 && again != 1) {
-	        	
-	        	 System.out.print("다시 한번 하시겠습니까? 1.아니오 2. 예 : ");
-	        	 again = scanner.nextInt();
-	        }
-            
-	       
-            
         }
 		
 		

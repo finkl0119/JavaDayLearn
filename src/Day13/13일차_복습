@@ -1,0 +1,22 @@
+* 13일차 복습
+
+== 배열 
+1차원 배열 
+int a[] = new int[5];
+
+다차원 배열
+int b[][] = new int [3][2]; 3*2=6
+
+a.length => 5
+b.length => 3
+b[0].length => 2
+
+int c[][] = new int [2][];
+c[0] = new int[1];
+c[1] = new int[2];
+
+== 함수
+
+
+
+
