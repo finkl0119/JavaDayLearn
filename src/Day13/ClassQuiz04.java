@@ -111,13 +111,7 @@ public class ClassQuiz04 {
 				System.out.println("번호를 다시 선택해주세요.");
 				continue;
 			}
-        	
-
         }
-		
-		
 	}	
-	
-	
-	
+
 }
