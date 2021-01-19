@@ -7,7 +7,6 @@ class Buyer
 {
 	int money;
 
-
 	Computer buyCom[] = new Computer[10];
 	Aircon buyAir[] = new Aircon[10];
 	Ref buyref[] = new Ref[10];
