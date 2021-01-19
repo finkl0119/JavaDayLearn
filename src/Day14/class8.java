@@ -78,7 +78,7 @@ class MartCon
 	void changeCom(Buyer[] b, int index ,Computer[] comArr)
 	{
 		int j = 0;
-		while(comArr[j] == null)
+		while(comArr[j] == null && j < 10)
 		{
 			j++;
 		}
@@ -101,7 +101,7 @@ class MartCon
 	void changeAir(Buyer[] b, int index ,Aircon[] airconArr)
 	{
 		int j = 0;
-		while(airconArr[j] == null)
+		while(airconArr[j] == null && j < 10)
 		{
 			j++;
 		}
@@ -124,7 +124,7 @@ class MartCon
 	void changeRef(Buyer[] b, int index ,Ref[] refrigArr)
 	{
 		int j = 0;
-		while(refrigArr[j] == null)
+		while(refrigArr[j] == null && j < 10)
 		{
 			j++;
 		}
@@ -147,7 +147,7 @@ class MartCon
 	void changeAirCon(Buyer[] b, int index ,AirCleaner[] airCleanerArr)
 	{
 		int j = 0;
-		while(airCleanerArr[j] == null)
+		while(airCleanerArr[j] == null && j < 10)
 		{
 			j++;
 		}
