@@ -32,7 +32,6 @@ class Player {
 			Random random = new Random();
 			this.distance = this.distance + random.nextInt(9)+1;
 			
-			
 			System.out.println(this.name + " : " + this.distance + "M");		
 			this.checkEnd();
 		}

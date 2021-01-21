@@ -1,0 +1,21 @@
+* 15일차 복습
+
+class A {
+}
+
+class B{
+	
+	A a = new A();
+	A a1;
+	void Set(A a){
+		a1 = a;
+	}
+}
+
+main(){
+	B b = new B();
+	A a = new A();
+	b.Set(a);  //위의 a가 아닌 b클래스 안에있는 a
+}
+
+

@@ -2,6 +2,11 @@ package Day14;
 
 import java.util.Scanner;
 
+/**
+ * 마트게임
+ * @author YU
+ *
+ */
 //1 ��
 class Buyer
 {
