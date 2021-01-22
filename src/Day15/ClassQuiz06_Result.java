@@ -51,7 +51,7 @@ class player1{
 
 
 
-public class class7
+public class ClassQuiz06_Result
 {
 	public static void main(String args[])
 	{	

@@ -202,7 +202,7 @@ class FishControl
 		System.out.println("���ϵ帳�ϴ�. ��� ����⸦ ��ҽ��ϴ�.");
 	}
 }
-public class class9 {
+public class ClassQuiz05_Result {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
