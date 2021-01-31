@@ -1,5 +1,6 @@
 package Day17;
 
+//1월 22일
 class Point { 
 	private int x, y; 
 	

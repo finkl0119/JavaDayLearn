@@ -2,6 +2,7 @@ package Day14;
 
 import java.util.Scanner;
 
+//1월 18일
 class Computer1{
 	
 	String makeCompany;

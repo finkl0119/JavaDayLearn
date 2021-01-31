@@ -3,6 +3,7 @@ package Day13;
 import java.util.Random;
 import java.util.Scanner;
 
+//1월 15일
 //승리
 class Win {
 	

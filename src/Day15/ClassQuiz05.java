@@ -1,5 +1,6 @@
 package Day15;
 
+//1월 19일
 //물고기
 class FishModel{
 		

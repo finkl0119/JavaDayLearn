@@ -1,6 +1,6 @@
 package Day16;
 
-
+//1월 21일
 public class ClassQuiz07 {
 	
 	public static void main(String[] args) {
