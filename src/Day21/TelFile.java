@@ -1,4 +1,4 @@
-package Day1;
+package Day21;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -36,17 +36,17 @@ class MyPhone {
 	FileWriter fout = null;
 	FileReader file_check = null;
 	File file = new File("D:\\PhoneBook.txt");
-	//ÆÄÀÏÀ» ¾²±â À§ÇØ¼­ °´Ã¼¸¦ ¸¸µé¾ú½À´Ï´Ù.
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.
 
 	int menu, i;
 	boolean flag = true;
 	String input_name, input_number, input_addr, input_gen;
 
-	//º¯¼ö
+	//ï¿½ï¿½ï¿½ï¿½
 
 	void myList() throws IOException {
 
-		if(!file.exists()) {		//ÆÄÀÏÀÌ ¾øÀ¸¸é ÆÄÀÏ »ý¼º
+		if(!file.exists()) {		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			file.createNewFile();
 		}
 
@@ -64,20 +64,20 @@ class MyPhone {
 			list.remove(0);
 
 		while(true) {
-			System.out.println("1.Ãß°¡\t2.Ã£±â\t3.ÀüÃ¼ Ãâ·Â\t4.»èÁ¦\t5.Á¾·á");
-			System.out.print("ÀÔ·Â>>");
+			System.out.println("1.ï¿½ß°ï¿½\t2.Ã£ï¿½ï¿½\t3.ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½\t4.ï¿½ï¿½ï¿½ï¿½\t5.ï¿½ï¿½ï¿½ï¿½");
+			System.out.print("ï¿½Ô·ï¿½>>");
 			menu = sc.nextInt();
 
 			if(menu == 1) {
-				System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
-				System.out.print("ÀÌ¸§: ");
+				System.out.println("ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+				System.out.print("ï¿½Ì¸ï¿½: ");
 				input_name = sc.next();
 
 				for(int i =0;i<list.size();i++)
 				{
 					if(input_name.equals(list.get(i).getName()))
 					{
-						System.out.println("Áßº¹µÈ ÀÌ¸§ÀÔ´Ï´Ù.");
+						System.out.println("ï¿½ßºï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½Ô´Ï´ï¿½.");
 						flag = false;
 						break;
 					}
@@ -87,9 +87,9 @@ class MyPhone {
 					}
 				}
 				if(flag == true) {
-					System.out.print("ÀüÈ­¹øÈ£: ");
+					System.out.print("ï¿½ï¿½È­ï¿½ï¿½È£: ");
 					input_number = sc.next();
-					System.out.print("ÁÖ¼Ò: ");
+					System.out.print("ï¿½Ö¼ï¿½: ");
 					sc.nextLine();
 					input_addr = sc.nextLine();
 
@@ -102,20 +102,20 @@ class MyPhone {
 						file_check = new FileReader("D:\\PhoneBook.txt");
 
 						if(file_check.read() == -1) {
-							fout.write("ÀÌ¸§\t\tÀüÈ­¹øÈ£\t\tÁÖ¼Ò\r\n");
+							fout.write("ï¿½Ì¸ï¿½\t\tï¿½ï¿½È­ï¿½ï¿½È£\t\tï¿½Ö¼ï¿½\r\n");
 						}
 
 						fout.write(info);
 						fout.close();
 
 					} catch (IOException e) {
-						System.out.println("ÀÔÃâ·Â ¿À·ù");
+						System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 					}
 				}
 			} else if(menu == 2) {
 
-				System.out.println("Ã£À» ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä.");
-				System.out.print("ÀÌ¸§: ");
+				System.out.println("Ã£ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.");
+				System.out.print("ï¿½Ì¸ï¿½: ");
 				input_name = sc.next();
 				flag = true;
 				for(int i =0;i<list.size();i++)
@@ -133,11 +133,11 @@ class MyPhone {
 					}
 				}
 				if(flag == false ) {
-					System.out.println("Ã£´Â »ç¶÷ÀÌ ¾ø½À´Ï´Ù.");
+					System.out.println("Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 				}
 			} else if(menu == 3) {
 
-				System.out.println("ÀÌ¸§\t\tÀüÈ­¹øÈ£\t\tÁÖ¼Ò");
+				System.out.println("ï¿½Ì¸ï¿½\t\tï¿½ï¿½È­ï¿½ï¿½È£\t\tï¿½Ö¼ï¿½");
 				for(int i =0;i<list.size();i++)
 				{
 					System.out.println(list.get(i).getName() +"\t\t "+
@@ -146,8 +146,8 @@ class MyPhone {
 
 			} else if(menu == 4) {
 
-				System.out.println("»èÁ¦ÇÒ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä.");
-				System.out.print("ÀÌ¸§: ");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.");
+				System.out.print("ï¿½Ì¸ï¿½: ");
 				input_name = sc.next();
 				int index = -1;
 				
@@ -155,7 +155,7 @@ class MyPhone {
 				{
 					if(input_name.equals(list.get(i).getName()))
 					{
-						System.out.println(list.get(i).getName()+"ÀÌ »èÁ¦°¡ µÆ½À´Ï´Ù.");
+						System.out.println(list.get(i).getName()+"ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ½ï¿½ï¿½Ï´ï¿½.");
 						index = i;
 						break;
 					}
@@ -163,13 +163,13 @@ class MyPhone {
 				}
 				if(index == -1)
 				{
-					System.out.println("Ã£´Â »ç¶÷ÀÌ ¾ø½À´Ï´Ù.");
+					System.out.println("Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 				}
 				else
 				{
 					list.remove(index);
 					fout = new FileWriter("D:\\PhoneBook.txt", false);
-					fout.write("ÀÌ¸§\t\tÀüÈ­¹øÈ£\t\tÁÖ¼Ò\r\n");
+					fout.write("ï¿½Ì¸ï¿½\t\tï¿½ï¿½È­ï¿½ï¿½È£\t\tï¿½Ö¼ï¿½\r\n");
 					for(int i =0;i<list.size();i++)
 					{
 						fout.write(list.get(i).getName()+"\t\t"+list.get(i).getNumber()+
@@ -179,10 +179,10 @@ class MyPhone {
 				
 				fout.close();
 			} else if(menu == 5) {
-				System.out.println("Á¾·áÇÕ´Ï´Ù.");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
 				break;
 			} else {
-				System.out.println("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.");
+				System.out.println("ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ô´Ï´ï¿½.");
 			}
 		}
 	}

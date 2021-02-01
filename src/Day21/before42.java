@@ -1,14 +1,14 @@
-package Day02;
+package Day21;
 
 import java.io.*;
 import java.util.*;
 
-class MyFriendList {
+class MyFriendList1 {
 	private String name;
 	private String number;
 	private String addr;
 
-	MyFriendList(String name, String number, String addr) {
+	MyFriendList1(String name, String number, String addr) {
 		this.name = name;
 		this.number = number;
 		this.addr = addr;
@@ -27,10 +27,10 @@ class MyFriendList {
 	}
 }
 
-class MyPhone {
+class MyPhone1 {
 
 	Scanner sc = new Scanner(System.in);
-	ArrayList <MyFriendList> list = new ArrayList<MyFriendList>();
+	ArrayList <MyFriendList1> list = new ArrayList<MyFriendList1>();
 
 	FileWriter fout = null;
 	FileReader file_check = null;
@@ -42,19 +42,19 @@ class MyPhone {
 
 	void myList() throws IOException {
 		
-		if(!file.exists()) {		//ÆÄÀÏÀÌ ¾øÀ¸¸é ÆÄÀÏ »ý¼º
+		if(!file.exists()) {		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			file.createNewFile();
 		}
 		
 		while(true) {
-			System.out.println("1.Ãß°¡\t2.Ã£±â\t3.ÀüÃ¼ Ãâ·Â\t4.»èÁ¦\t5.Á¾·á");
-			System.out.print("ÀÔ·Â>>");
+			System.out.println("1.ï¿½ß°ï¿½\t2.Ã£ï¿½ï¿½\t3.ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½\t4.ï¿½ï¿½ï¿½ï¿½\t5.ï¿½ï¿½ï¿½ï¿½");
+			System.out.print("ï¿½Ô·ï¿½>>");
 			menu = sc.nextInt();
-			//sc.nextLine();	//¿£ÅÍ°ª Á¦°Å
+			//sc.nextLine();	//ï¿½ï¿½ï¿½Í°ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 			if(menu == 1) {
-				System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
-				System.out.print("ÀÌ¸§: ");
+				System.out.println("ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+				System.out.print("ï¿½Ì¸ï¿½: ");
 				input_name = sc.next();
 
 				file_check = new FileReader("D:\\PhoneBook.txt");
@@ -64,7 +64,7 @@ class MyPhone {
 				while((line = in.readLine()) != null) {
 					
 					if(line.contains(input_name)) {
-						System.out.println("Áßº¹µÈ ÀÌ¸§ÀÔ´Ï´Ù.");
+						System.out.println("ï¿½ßºï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½Ô´Ï´ï¿½.");
 						flag = false;
 						break;
 					} else {
@@ -73,9 +73,9 @@ class MyPhone {
 				}
 				
 				if(flag == true) {
-					System.out.print("ÀüÈ­¹øÈ£: ");
+					System.out.print("ï¿½ï¿½È­ï¿½ï¿½È£: ");
 					input_number = sc.next();
-					System.out.print("ÁÖ¼Ò: ");
+					System.out.print("ï¿½Ö¼ï¿½: ");
 					sc.nextLine();
 					input_addr = sc.nextLine();
 
@@ -88,20 +88,20 @@ class MyPhone {
 						file_check = new FileReader("D:\\PhoneBook.txt");
 						
 						if(file_check.read() == -1) {
-							fout.write("ÀÌ¸§\t\tÀüÈ­¹øÈ£\t\tÁÖ¼Ò\r\n");
+							fout.write("ï¿½Ì¸ï¿½\t\tï¿½ï¿½È­ï¿½ï¿½È£\t\tï¿½Ö¼ï¿½\r\n");
 						}
 
 						fout.write(info);
 						fout.close();
 
 					} catch (IOException e) {
-						System.out.println("ÀÔÃâ·Â ¿À·ù");
+						System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 					}
 				}
 			} else if(menu == 2) {
 
-				System.out.println("Ã£À» ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä.");
-				System.out.print("ÀÌ¸§: ");
+				System.out.println("Ã£ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.");
+				System.out.print("ï¿½Ì¸ï¿½: ");
 				input_name = sc.next();
 				
 				file_check = new FileReader("D:\\PhoneBook.txt");
@@ -113,7 +113,7 @@ class MyPhone {
 					while((line = in.readLine()) != null) {
 						
 						if(line.contains(input_name)) {
-							System.out.println("ÀÌ¸§\t\tÀüÈ­¹øÈ£\t\tÁÖ¼Ò");
+							System.out.println("ï¿½Ì¸ï¿½\t\tï¿½ï¿½È­ï¿½ï¿½È£\t\tï¿½Ö¼ï¿½");
 							System.out.println(line);
 							flag = true;
 							break;
@@ -123,7 +123,7 @@ class MyPhone {
 					}
 					
 					if(flag == false ) {
-						System.out.println("Ã£´Â »ç¶÷ÀÌ ¾ø½À´Ï´Ù.");
+						System.out.println("Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 					}
 					in.close();
 					
@@ -147,8 +147,8 @@ class MyPhone {
 
 			} else if(menu == 4) {
 				
-				System.out.println("»èÁ¦ÇÒ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä.");
-				System.out.print("ÀÌ¸§: ");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.");
+				System.out.print("ï¿½Ì¸ï¿½: ");
 				input_name = sc.next();
 				
 				file_check = new FileReader("D:\\PhoneBook.txt");
@@ -163,7 +163,7 @@ class MyPhone {
 					while((line = in.readLine()) != null) {
 						
 						if(line.contains(input_name)) {
-							System.out.println(input_name+"´ÔÀ» »èÁ¦ÇÕ´Ï´Ù.");
+							System.out.println(input_name+"ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
 							flag = true;
 						} else {
 							temp += line+"\r\n";
@@ -177,7 +177,7 @@ class MyPhone {
 					fout.close();
 					
 					if(flag == false ) {
-						System.out.println("Ã£´Â »ç¶÷ÀÌ ¾ø½À´Ï´Ù.");
+						System.out.println("Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 					}
 					fout.close();
 					in.close();
@@ -187,40 +187,40 @@ class MyPhone {
 				}
 				
 			} else if(menu == 5) {
-				System.out.println("Á¾·áÇÕ´Ï´Ù.");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
 				break;
 			} else {
-				System.out.println("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.");
+				System.out.println("ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ô´Ï´ï¿½.");
 			}
 		}
 	}
 }
 
 
-public class test42 {
+public class before42 {
 
 	public static void main(String[] args) throws IOException {
 
-		new MyPhone().myList();
+		new MyPhone1().myList();
 		/*
-		 * 42¹ø ¹®Á¦
-		 * <Ã¹È­¸é>
-		 * 1.ÀÔ·Â  2.°Ë»ö  3.ÀüÃ¼Ãâ·Â  4.»èÁ¦  5.Á¾·á:
-		 * <1 ÀÔ·Â½Ã>
-		 * ÀÌ¸§: È«±æµ¿ / ÀüÈ­¹øÈ£ :010 / ÁÖ¼Ò: ÀÎÃµ½Ã =>ÀÔ·ÂÀÌ ³¡³ª¸é Ã¹È­¸éÀ¸·Î ÀÌµ¿
-		 * <2 ÀÔ·Â½Ã>
-		 * ÀÌ¸§ ÀÔ·Â: È«±æµ¿ -> ÀúÀåµÇ¾îÀÖ´Â ÀÌ¸§, ÀüÈ­¹øÈ£, ÁÖ¼Ò Ãâ·Â ÈÄ Ã¹È­¸éÀ¸·Î ÀÌµ¿
-		 * <3 ÀÔ·Â½Ã>
-		 * ÀÌ¸§ ÀÔ·Â: È«±æµ¿ -> ÀÌ¸§ÀÌ °°Àº µ¥ÀÌÅÍ°¡ ÀÖÀ¸¸é »èÁ¦ / ¾øÀ¸¸é ¾ø´Ù°í Ãâ·Â
-		 * <4 ÀÔ·Â½Ã>
-		 * ¸ðµç ÀüÈ­¹øÈ£¸¦ Ãâ·Â ÀÌÈÄ Ã¹È­¸é
-		 * <5 ÀÔ·Â½Ã>
-		 * ÇÁ·Î±×·¥ Á¾·á
+		 * 42ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		 * <Ã¹È­ï¿½ï¿½>
+		 * 1.ï¿½Ô·ï¿½  2.ï¿½Ë»ï¿½  3.ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½  4.ï¿½ï¿½ï¿½ï¿½  5.ï¿½ï¿½ï¿½ï¿½:
+		 * <1 ï¿½Ô·Â½ï¿½>
+		 * ï¿½Ì¸ï¿½: È«ï¿½æµ¿ / ï¿½ï¿½È­ï¿½ï¿½È£ :010 / ï¿½Ö¼ï¿½: ï¿½ï¿½Ãµï¿½ï¿½ =>ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã¹È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
+		 * <2 ï¿½Ô·Â½ï¿½>
+		 * ï¿½Ì¸ï¿½ ï¿½Ô·ï¿½: È«ï¿½æµ¿ -> ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½Ö´ï¿½ ï¿½Ì¸ï¿½, ï¿½ï¿½È­ï¿½ï¿½È£, ï¿½Ö¼ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ Ã¹È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
+		 * <3 ï¿½Ô·Â½ï¿½>
+		 * ï¿½Ì¸ï¿½ ï¿½Ô·ï¿½: È«ï¿½æµ¿ -> ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ / ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ù°ï¿½ ï¿½ï¿½ï¿½
+		 * <4 ï¿½Ô·Â½ï¿½>
+		 * ï¿½ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã¹È­ï¿½ï¿½
+		 * <5 ï¿½Ô·Â½ï¿½>
+		 * ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½ï¿½ï¿½
 		 * 
-		 * 1~5°ª ÀÌ¿ÜÀÇ °ªÀÌ ÀÔ·ÂµÇ¸é "Àß¸øµÈ ÀÔ·Â" Ãâ·Â
+		 * 1~5ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ÂµÇ¸ï¿½ "ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½" ï¿½ï¿½ï¿½
 		 * 
-		 * ¸ðµç ÀüÈ­¹øÈ£´Â ÇÏ³ªÀÇ ÆÄÀÏ¿¡ ÀúÀåµÇ¾î¾ß ÇÔ, Ãß°¡ or »èÁ¦ ½Ã ÀüÈ­¹øÈ£°¡ ¾÷µ¥ÀÌÆ® µÇ¾î¾ß ÇÔ
-		 * ÇÁ·Î±×·¥ Á¾·á ÈÄ¿¡µµ µ¥ÀÌÅÍ°¡ º¸Á¸µÇ¾î¾ßÇÏ°í ÇÁ·Î±×·¥ÀÌ ½ÃÀÛµÇ¸é ÆÄÀÏ¿¡ ÀÖ´Â ÀüÈ­¹øÈ£ºÎ¸¦ ÀÐ¾î¼­ µ¥ÀÌÅÍ¸¦ °Ë»öÇÏ°Å³ª Ãâ·ÂÇØ¾ß ÇÔ
+		 * ï¿½ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½È£ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ ï¿½ï¿½, ï¿½ß°ï¿½ or ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ç¾ï¿½ï¿½ ï¿½ï¿½
+		 * ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÛµÇ¸ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½È­ï¿½ï¿½È£ï¿½Î¸ï¿½ ï¿½Ð¾î¼­ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½Ë»ï¿½ï¿½Ï°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ ï¿½ï¿½
 		 */
 
 	}
