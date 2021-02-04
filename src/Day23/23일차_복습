@@ -1,0 +1,91 @@
+* 21일차 복습
+
+1. 클래스 
+	속성과 기능
+2. has 관계
+	다른 클래스가 내 안에 있는 것 객체를 생성해서 사용
+3. 클래스 배열
+	클래스를 배열화 배열 객체를 만들고 생성자 호출을 해서 각각의 배열에 채워져야 함.
+	A[] a;
+	A[] abc(){
+		A[] b = new A[10];
+		return b;
+	}
+	a = b;
+4. 생성자 
+	클래스 명이랑 같고 리턴 값이 없는 함수의 형태를 가집니다. 인자는 자유
+	class A{
+		A(int a, String s){
+		}
+		A(){
+		}
+	}
+5. 상속
+	슈퍼클래스 모든 것을 서브 클래서가 다 받는 형태를 말합니다. 슈퍼 <= 서브
+	서브가 만들어지면 슈퍼클래스 객체가 생성이 됩니다.
+	extends 
+6. 접근 관계
+	public private protected default	 
+7. is 관계
+	상속 관계
+8. 	오버로딩 오버라이딩
+	오버로딩 - 함수, 생성자
+	오버라이딩 - 부모의 함수를 받아서 자식 클래스가 재정의
+9. 추상화
+	abstract class, interface
+	추상화 -> 추상화 메소드 있는 것을 
+	class < abstract class < interface
+	interface -> class impliments
+	interface -> interface extends
+	abstract class -> class extends
+10. 컬렉션/제네릭
+	Set ArrayList HashMap
+11. 파일 입출력
+	FileReader FileWriter File -> 인터넷 검색 사용 전화번호부 참고
+12. 쓰레드
+	나는 사장인데 종업원을 고용하여 일을 좀 더 효율적으로 운영
+	-> 자원에 대한 소비가 있나요?
+		소비는 당연히 있음. 하지만 더 유연하게 하기 위해 ~
+		class Thread 
+		interface Runable
+		class A extend Thread{
+			public void run(){
+			}
+		}
+		A a = new A();
+		a.start();
+		
+		class B impliments Runable {
+			public void run(){
+			}
+		}
+		B b = new B();
+		Thread t = new Thread(b);
+		t.start();
+			
+		yield(), wait(), notify(), notifyAll(), join(), synchronized 
+		  
+13. 통신
+
+14. GUI	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
