@@ -1,0 +1,175 @@
+package Day1;
+
+import java.util.Scanner;
+
+class ControlOP
+{
+	int add(int a, int b)
+	{
+		return a+b;
+	}
+	double add(double a, double b)
+	{
+		return a+b;
+	}
+	int min(int a, int b)
+	{
+		return a-b;
+	}
+	double min(double a, double b)
+	{
+		return a-b;
+	}
+	int mul(int a, int b)
+	{
+		return a*b;
+	}
+	double mul(double a, double b)
+	{
+		return a*b;
+	}
+	int div(int a, int b)
+	{
+		return a/b;
+	}
+	double div(double a, double b)
+	{
+		return a/b;
+	}
+	
+	int[] input(Scanner sc)
+	{
+		int a[] = new int[2];
+		System.out.print("숫자 1 입력 :");
+		a[0] = sc.nextInt();
+		System.out.print("숫자 2 입력 :");
+		a[1] = sc.nextInt();
+		return a;
+	}
+	double[] doubleinput(Scanner sc)
+	{
+		double a[] = new double[2];
+		System.out.print("숫자 1 입력 :");
+		a[0] = sc.nextDouble();
+		System.out.print("숫자 2 입력 :");
+		a[1] = sc.nextDouble();
+		return a;
+	}
+	
+	int sendInput(Scanner sc)
+	{
+		return sc.nextInt();
+	}
+	
+	void errorPrint()
+	{
+		System.out.println("잘못된 입력입니다.");
+	}
+	void resultPrint(int result)
+	{
+		System.out.println("결과 값 : "+result);
+	}
+	void resultPrint(double result)
+	{
+		System.out.println("결과 값 : "+result);
+	}
+	void exitPrint()
+	{
+		System.out.println("프로그램을 종료합니다.");
+	}
+	void firstPrint()
+	{
+		System.out.print("1.더하기 2.빼기 3.곱하기 4.나누기 :");
+	}
+	void zeroPrint()
+	{
+		System.out.print("1. 정수연산 2. 실수연산 3.종료 : ");
+	}
+}
+
+
+public class test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		boolean flag = true;
+		ControlOP co = new ControlOP();
+		int a[];
+		double b[];
+		while(flag)
+		{
+			co.zeroPrint();
+			int num = co.sendInput(sc);
+			switch(num)
+			{
+			case 1:
+				co.firstPrint();
+				num = co.sendInput(sc);
+				if(num == 1)
+				{
+					a=co.input(sc);
+					co.resultPrint(co.add(a[0], a[1]));
+				}
+				else if(num == 2)
+				{
+					a=co.input(sc);
+					co.resultPrint(co.min(a[0], a[1]));
+				}
+				else if(num == 3)
+				{
+					a=co.input(sc);
+					co.resultPrint(co.mul(a[0], a[1]));
+				}
+				else if(num == 4)
+				{
+					a=co.input(sc);
+					co.resultPrint(co.div(a[0], a[1]));
+				}
+				else
+				{
+					co.errorPrint();
+				}
+				break;
+			case 2:
+				co.firstPrint();
+				num = co.sendInput(sc);
+				if(num == 1)
+				{
+					b = co.doubleinput(sc);
+					co.resultPrint(co.add(b[0], b[1]));
+				}
+				else if(num == 2)
+				{
+					b = co.doubleinput(sc);
+					co.resultPrint(co.min(b[0], b[1]));
+				}
+				else if(num == 3)
+				{
+					b = co.doubleinput(sc);
+					co.resultPrint(co.mul(b[0], b[1]));
+				}
+				else if(num == 4)
+				{
+					b = co.doubleinput(sc);
+					co.resultPrint(co.div(b[0], b[1]));
+				}
+				else
+				{
+					co.errorPrint();
+				}
+				break;
+			case 3:
+				co.exitPrint();
+				flag = false;
+				break;
+			default :
+				co.errorPrint();
+				break;
+			}
+		}
+
+	}
+}
+
+

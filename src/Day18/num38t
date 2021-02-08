@@ -1,0 +1,80 @@
+package Day1;
+
+class gong1
+{
+	protected int key;
+	protected int weight;
+	protected String name;
+
+	
+	public void Scream() 
+	{
+		System.out.println("나는 공룡이다!!");
+	}
+}
+class Tirano extends gong1
+{
+	
+	Tirano()
+	{
+	super.key = 2;
+	super.weight = 1;
+	super.name = "티라노사우르스";
+	}
+	
+	public void Scream() 
+	{
+		System.out.println("나는"+super.key+"m이고, 몸무게 "+super.weight+"톤 인 "+super.name+"이다.");
+	}
+	
+	
+}
+
+//트리케라톱스
+class Tree extends gong1
+{
+	Tree()
+	{
+	super.key = 3;
+	super.weight = 2;
+	super.name = "트리케라톱스";
+	}
+	
+	public void Scream() 
+	{
+		System.out.println("나는"+super.key+"m이고, 몸무게 "+super.weight+"톤 인 "+super.name+"이다.");
+	}
+	
+}
+
+//부경사우르스
+class Bugyeong extends gong1
+{
+	Bugyeong()
+	{
+	super.key = 5;
+	super.weight = 3;
+	super.name = "부경사우르스";
+	}
+	
+	public void Scream() 
+	{
+		System.out.println("나는"+super.key+"m이고, 몸무게 "+super.weight+"톤 인 "+super.name+"이다.");
+	}
+}
+public class gong {
+
+	static void print(gong1 p) {
+		
+		p.Scream();
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		print(new Tirano());
+		print(new Tree());
+		print(new Bugyeong());
+	}
+
+}
