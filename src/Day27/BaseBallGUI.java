@@ -13,9 +13,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-class RCom { 
+class RCom1 { 
 	int com[]; //정수형 com이라는 배열 선언
-	public RCom() { // RCom 인자를 받지 않는 생성자
+	public RCom1() { // RCom 인자를 받지 않는 생성자
 		// TODO Auto-generated constructor stub 
 		com = new int[3]; // com 변수에 정수형 배열 객체를 생성 후에 대입
 		com[0] =(int)(Math.random()*9+1); // com에 0번 인덱스에 1~9까지 중에 랜덤 값을 대입
@@ -41,11 +41,11 @@ class RCom {
 		
 }
 
-class UserCheck { 
+class UserCheck1 { 
 	int strike; // 정수 변수 strike 선언
 	int ball; // 정수 변수 ball 선언
 	boolean out; // 불 변수 out 선언
-	public UserCheck(int[] com, int[] user) {
+	public UserCheck1(int[] com, int[] user) {
 	//UserCheck 생성자로 인자로 정수형 배열 두개를 받는다.
 		// TODO Auto-generated constructor stub
 		for(int i = 0; i<3 ; i++) 
@@ -91,7 +91,7 @@ class UserCheck {
 }
 
 
-class MyPanel2 extends JPanel{ 
+class MyPanel3 extends JPanel{ 
 	JTextField jt; //JTextField형 변수 jt 선언 
 	int strike = 0; //정수형 strike 변수를 0으로 초기화 
 	int ball = 0; //정수형 ball 변수를 0으로 초기화 
@@ -187,7 +187,7 @@ class MyPanel2 extends JPanel{
  */
 public class BaseBallGUI extends JFrame implements ActionListener{
 	
-	MyPanel2 p; //MyPanel2형 변수 p 선언 
+	MyPanel3 p; //MyPanel2형 변수 p 선언 
 	JTextField jt; //JTextField형 변수 jt 선언 
 	JButton jb; // JButton형 변수 jb 선언 
 	RCom rc; // RCom형 변수 rc 선언 
@@ -199,7 +199,7 @@ public class BaseBallGUI extends JFrame implements ActionListener{
 		//Container형 변수 c 선언후 getContentPane함수를 호출하여 Container 객체를 대입 
 		c.setLayout(new BorderLayout()); 
 		//Container에 setLayout함수 호출 인자로 BorderLayout 객체를 생성해서 넘김 
-		p = new MyPanel2(); 
+		p = new MyPanel3(); 
 		// p 변수에 Mypanel2의 객체를 생성 후 대입 
 		jt = new JTextField(15); 
 		// jt 변수에 JTextField의 길이를 15로 정하고 객체를 생성 후 대입 
@@ -240,7 +240,7 @@ public class BaseBallGUI extends JFrame implements ActionListener{
 			//user 인덱스 i에 temp 인덱스 i의 문자열 값을 정수로 변환 해서 대입 
 		} 
 		
-		UserCheck u = new UserCheck(rc.getCom(), user); 
+		UserCheck1 u = new UserCheck1(rc.getCom(), user); 
 		//UserCheck형 변수 u를 선언 후 UserCheck rc com 배열과 user 배열을 
 		//인자로 넘기는 객체 생성 
 		System.out.println(u.getBall()+""+u.getStrike());//출력 
