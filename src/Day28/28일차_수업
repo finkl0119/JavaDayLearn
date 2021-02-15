@@ -1,0 +1,79 @@
+** 28일차 **
+
+화면구현 -> 웹 화면 구현 -> HTML5 CSS3
+
+HTML5
+<텍스트 관련 태그들>
+p태그 - 단락을 만드는
+b, strong - 텍스트 굵게
+table - 표를 만든다.
+mark - 형광펜으로 텍스트를 그은 것처럼 표시
+em, i - 이텔릭체 표시
+ul, ol, li - 목록을 만드는 //리스트 네비게이션 목록
+
+ol
+속성값       설명
+1			기본값(숫자)
+a			소문자
+A			대문자
+i			로마숫자 소문자
+로마숫자 1		로마숫자 대문자
+
+<ul>
+	검정원<li>
+		<ul>
+		하얀원<li>
+
+<table>
+	<tr> 행
+		<td> 셀
+			<th> 행의 헤더
+
+colspan 열합치기
+rowspan 행 합치기
+
+<caption> 
+<figcaption>
+표의 제목을 붙이기
+
+aria-describedby
+표에 설명 붙이기
+
+<thead>
+<tbody>
+<tfoot>
+
+<col> <colgroup> 여러개의 열을 묶어서 스타일에 저장
+
+img - 이미지를 삽입하는 태그
+figcaption - 이미지를 설명하는 태그
+a - 링크를 만드는 태그
+target - 링크를 새창 새탭으로 열기위한 <a> 태그 속송
+map - 이미지 맵을 만드는 태그
+
+html에서 이미지로 사용할수 있는 파일 형식
+gif, jpg jpeg png
+
+<img src-"a.png" alt="이미지 안나옴">
+
+<a> 태그
+href : 링크한 문서나 사이트의  주소를 입력
+target : 현재창인지 새창인지 선택을 여기서 세팅
+download, rel, hreflang, type
+
+target -> _blank(새창) / _self(내창 기본값) / parent(부모창) / _top(최상위창)
+
+==============================================
+
+h - 제목 <h1> ~ <h6>
+br - /n  한칸 띄우기
+hr - 한줄 내려가는데 줄이  그어지고
+blockquote - 인용문 넣기
+pre - 원래 그대로 쓰기
+q - 글쓸때 쌍따옴표 쓰려면 쓰는 태그
+
+
+
+CSS
+
+

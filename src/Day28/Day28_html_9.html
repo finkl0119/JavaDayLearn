@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>추천 관광지</title>
+        <script src="modernizr-custom.js"></script>
+        <style>
+           
+        </style>
+    </head>
+    <body>
+       <h1>제주의 오름</h1>
+        <p>완만하고 부드러운 용눈이 오름은 전설이 있다</p>
+        <figure>
+            <img src="images/oreum-1.jpg" alt="오름">
+            <figcaption>완만하고 부드러운 용눈이 오름</figcaption>
+        </figure>
+
+        <p>링크 만들기</p>
+        <p><a href="http://www.naver.com">네이버</a></p>
+        <p><a href="http://www.google.com" target="_blank">구글</a></p>
+
+        <p>앵커 만들기</p>
+        <ul id="menu">
+            <li><a href="#content1">메뉴1</a></li>
+            <li><a href="#content2">메뉴2</a></li>
+            <li><a href="#content3">메뉴3</a></li>
+        </ul>
+        <p id="content1">내용1</p>
+        <p>내용 1 앵커</p>
+        <p><a href="#menu">[메뉴로]</a></p>
+        <p id="content2">내용2</p>
+        <p>내용 2 앵커</p>
+        <p><a href="#menu">[메뉴로]</a></p>
+        <p id="content3">내용3</p>
+        <p>내용 3 앵커</p>
+        <p><a href="#menu">[메뉴로]</a></p>
+
+        <img src="images/kids.jpg" alt="" usemap="#favorites">
+        <map name="favorites">
+            <area shape="rect" coords="10,10,160,200" href="https://www.naver.com" target="_blank">
+            <area shape="rect" coords="220,10,380,200" href="https://www.google.com" target="_blank">
+        </map>
+
+        <p>SVG 이미지 사용하기</p>
+        <img src="images/muffin.svg">
+        <script>
+            if(!modernizr.svg){
+                $("img").attr("src", "images/muffin.png");
+            }
+        </script>
+
+    </body>
+</html>
