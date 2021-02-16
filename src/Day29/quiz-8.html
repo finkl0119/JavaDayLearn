@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>표 만들기</title>
+        <style>
+           form fieldset{
+               margin-bottom: 25px;
+           }
+           form ul li{
+                list-style: none;
+                margin:15px 0;
+                font-size: 14px;
+           }
+        </style>
+    </head>
+    <body>
+       <form>
+           <h1>상품주문서</h1>
+            <fieldset id="subject1">
+                <legend>개인정보</legend>
+                <ul>
+                    <li>
+                        <label class="reg" for="subj1">이름</label>
+                        <input type="text" id="subj1" placeholder="여백없이 입력">
+                    </li>
+                    <li>
+                        <label class="reg" for="subj2">연락처</label>
+                        <input type="text" id="subj2" placeholder="연락 가능한 번호">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset id="subject2">
+                <legend>배송지 정보</legend>
+                <ul>
+                    <li>
+                        <label class="reg" for="subj3">주소</label>
+                        <input type="text" id="subj3">
+                    </li>
+                    <li>
+                        <label class="reg" for="subj4">전화번호</label>
+                        <input type="text" id="subj4" >
+                    </li>
+                    <li>
+                        <label class="reg" for="subj5">메모</label>
+                        <textarea type="text" id="subj5"></textarea>
+                    </li>
+                </ul>
+                
+            </fieldset>
+            <fieldset id="subject3">
+                <legend>주문 정보</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="grm1">과테말라 안티구아(100g)<input type="number" value="0">개
+                
+                    </li>
+                    <li>
+                        <input type="checkbox" value="grm2">인도네시아 만델링(100g)<input type="number" value="0">개
+                    </li>
+                    <li>
+                        <input type="checkbox" value="grm3">탐라는 도다(블렌딩)(100g)<input type="number" value="0">개
+                    </li>
+                </ul>
+            </fieldset>
+            
+            <button type="submit" value="submit">신청하기</button>
+            <button type="reset" value="reset">다시쓰기</button>
+       </form>
+    </body>
+</html>
