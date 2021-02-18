@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>내부 스타일 시트</title>
+        <style>
+           div{
+               width: 500px;
+               height: 300px;
+               border-radius: 10px;
+           }
+           .grad{
+               background: blue;
+               background: -webkit-linear-gradient(left top, blue, red);
+               background: -moz-linear-gradient(right bottom, blue, red);
+               background: -o-linear-gradient(right bottom, blue, red);
+               background: linear-gradient(right bottom, blue, red);
+           }
+        </style>
+
+        <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+    </head>
+    <body>
+       <div class="grad"></div>
+      
+    </body>
+</html>

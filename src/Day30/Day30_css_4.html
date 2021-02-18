@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>내부 스타일 시트</title>
+        <style>
+           div{
+               width: 300px;
+               padding: 35px;
+               border: 5 dotted #222;
+               background: skyblue;
+               margin-bottom: 20px;
+           }
+           .bg1{
+               background-clip: border-box;
+           }
+           .bg2{
+               background-clip: padding-box;
+           }
+           .bg3{
+               background-clip: content-box;
+           }
+        </style>
+
+        <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+    </head>
+    <body>
+        <div class="bg1">
+            <p><strong>토마토:</strong>
+            토마토는 성분이 포함된 과일</p>
+        </div>
+        <div class="bg2">
+            <p><strong>토마토:</strong>
+            토마토는 성분이 포함된 과일</p>
+        </div>
+        <div class="bg3">
+            <p><strong>토마토:</strong>
+            토마토는 성분이 포함된 과일</p>
+        </div>
+    </body>
+</html>
