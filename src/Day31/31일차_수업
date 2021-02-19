@@ -1,5 +1,70 @@
 ** 31일차 **
 
+## 레이아웃을 위한 스타일 
+width, height
+display
+border
+margin
+padding
+border-radius
+
+## 블록 레벨? 
+	<p> <h1>~<h6> <ul> <ol> <div> <blockquote> <form>
+	<hr> <table> <fieldset> <address>
+## 인라인 레벨?
+	<img> <object> <br> <sub> <span> <input> 
+	<textarea> <label> <button>
+	
+## display 
+	: none /contents/ bock / inline / inline-block / table / table / table-cell등
+	
+	block:블럭레벨요소로 변환
+	inline : 인라인 레벨요소로 변환
+	inline-block : 제일 바깥에 있는 요소들은 inline 인라인 레벨 안에 있는 요소들 block
 
 
-
+## border	
+	border-style
+	none
+	hidden
+	dashed
+	dotted
+	double
+	groove
+	inset
+	outset
+	ridge
+	solid
+	
+	border-top-width
+	border-bottom-width
+	border-right-width
+	border-left-width
+	border-width : 5px 10px  15px   20px  
+				   top right bottom left
+	
+## CSS 포지셔닝
+	float - 왼쪽 오른쪽 배치
+	clear - float 속성 해지
+	position - 배치방법지정
+	visibility - 화면 표시 여부 선택
+	z-index - 요소 쌓는 순서 설정
+	border-collapse - 테두리 합치기
+	table-layout -셀너비 지정
+	vertical-align - 셀 안에서 수직정렬
+	
+	box-sizing : content-box / border-box
+	
+	position static / relative / absolute / fixed
+	static - 요소를 문서의 흐름에 맞추어 배치합니다.
+	relative - 이전 요소에 자연스럽게 연결해 배치하되 위치를 지정할 수 있음.
+	absolute - 원하는 위치를 지정해 배치합니다.
+	fixed - 지정한 위치에 고정해 배치 합니다. 잘릴수 있습니다.
+	
+	
+	
+	
+	
+	
+	
+	
