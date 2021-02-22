@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>표 스타일</title>
+        <style>
+            body{
+                font-family: "맑은고딕","고딕","굴림";
+            }
+            .sc{
+                border-collapse: separate;
+                margin: 20px;
+            }
+            td{
+                border: 1px solid black;
+                padding: 10px;
+                text-align: center;
+            }
+            #tb1 td{
+                empty-cells: show;
+            }
+            #td2 td{
+                empty-cells: hide;
+            }
+            table #table4{
+                border-collapse: separate;
+                width: 300px;
+                padding: 10px;
+            }
+        
+        </style>
+
+        <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+    </head>
+    <body>
+        <table class="sc" id="td1">
+            <caption>프로축구 경기일정</caption>
+            <tr>
+                <td>울산</td>
+                <td>울산 vs 인천</td>
+            </tr>
+            <tr>
+                <td>부산</td>
+                <td>부산 vs 인천</td>
+            </tr>
+            <tr>
+                <td>대전</td>
+                <td>대전 vs 인천</td>
+                <td></td>
+            </tr>
+        </table>
+        <table class="sc" id="td2">
+            <caption>프로축구 경기일정</caption>
+            <tr>
+                <td>울산</td>
+                <td>울산 vs 인천</td>
+            </tr>
+            <tr>
+                <td>부산</td>
+                <td>부산 vs 인천</td>
+            </tr>
+            <tr>
+                <td>대전</td>
+                <td>대전 vs 인천</td>
+                <td></td>
+            </tr>
+        </table>
+        <table border="1" id="table4">
+            <caption>프로축구 경기일정</caption>
+            <tr>
+                <td>울산</td>
+                <td>울산 vs 인천</td>
+            </tr>
+            <tr>
+                <td>부산</td>
+                <td>부산 vs 인천</td>
+            </tr>
+            <tr>
+                <td>대전</td>
+                <td>대전 vs 인천</td>
+                <td></td>
+            </tr>
+        </table>
+    </body>
+</html>

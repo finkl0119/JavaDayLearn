@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>표 스타일</title>
+        <style>
+            .cotainer{
+                width: 960px;
+                margin: 0 auto;
+                background-color: #fff;
+                border: 1px solid #e7e7e7;
+            }
+            header{
+                height: 280px;
+                margin: 0;
+                background-image: url(images/header-bg.png);
+                background-repeat: no-repeat;
+                background-position: left top;
+            }
+            .navi{
+                background: black;
+                margin-top: -17px;
+                width: 960px;
+                height: 60px;
+            }
+            .navi ul{
+                list-style: none;
+                height: 40px;
+                padding-top: 10px;
+                padding-bottom: 5px;
+            }
+            .navi ul li{
+                display: inline;
+                float: left;
+            }
+            .navi a:link .navi a:visited{
+                padding:10px 5px 5px 35px;
+                display: block;
+                color: #fff;
+                width: 150px;
+                text-decoration: none;
+            }
+            .navi a:hover .navi a:focus{    
+                text-shadow: 0px 2px 2px #000;
+                color: yellow;
+            }
+            .navi a:active{
+                color: red;
+            }
+
+            body{
+                background-color: #fff;
+            }
+            form fieldset{
+                margin-bottom: 25px;
+            }
+            form legend{
+                font-size: 15px;
+                font-weight: 600px;
+            }
+            input:disabled{
+                background: #ddd;
+                border: 1px solid #ccc;
+            }
+            input:checked + span{
+                color: red;
+                border: 2px solid #ccc;
+            }
+
+        </style>
+
+        <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+    </head>
+    <body>
+       <div class="container">
+            <header>
+                <h1>유형민</h1>
+            </header>
+            <nav class="navi">
+                <ul>
+                    <li><a href="#">이용안내</a></li>
+                    <li><a href="#">객실소개</a></li>
+                    <li><a href="#">예약방법</a></li>
+                    <li><a href="#">예약하기</a></li>
+                </ul>
+            </nav>
+        </div>
+        <form>
+            <fieldset>
+                <legend>정보</legend>
+                <label>정보명<input type="text" disabled></label>
+            </fieldset>
+            <fieldset>
+                <legend>과목</legend>
+                <p>이달에 신청과목</p>
+                <label><input type="radio" name="subject" value="speaking"><span>회화</span></label>
+                <label><input type="radio" name="subject" value="grammar"><span>문법</span></label>
+                <label><input type="radio" name="subject" value="writing"><span>작문</span></label>
+                
+            </fieldset>
+        </form>
+    </body>
+</html>
