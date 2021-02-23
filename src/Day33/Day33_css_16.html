@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>표 스타일</title>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                float: left;
+                margin: 50px;
+            }
+            #box1{
+                background-color: green;
+                border: 1px solid black;
+                animation-name: shape;
+                animation-duration: 3s;
+            }
+            #box2{
+                background-color: purple;
+                border: 1px solid black;
+                animation-name: rotate;
+                animation-duration: 3s;                
+            }
+            @keyframes shape{
+                from{
+                    border: 1px solid black;
+                }
+                to{
+                    border: 1px solid black;
+                    border-radius: 50%;
+                }
+            }
+            @keyframes rotate{
+                from{
+                    transform: rotate(0deg);
+                }
+                to{
+                    transform: rotate(45deg);
+                }
+            }
+            #box3{
+                width: 100px;
+                height: 100px;
+                margin: 100px;
+                background-color: blue;
+                animation-name: change-bg;
+                animation-duration: 3s;
+            }
+            @keyframes change-bg{
+                from{
+                    background-color: blue;
+                    border: 1px solid black;
+                }
+                to{
+                    background-color: #a5d6ff;
+                    border: 1px solid blue;
+                    border-radius: 50%;
+                }
+            }
+            
+        </style>
+
+        <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+    </head>
+    <body>
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+    </body>
+</html>

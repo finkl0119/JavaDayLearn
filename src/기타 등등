@@ -19,12 +19,4 @@ finkl0119
 dbgudals1!
 포트 21
 
-**구글 폰트
-https://fonts.google.com/?preview.text_type=custom
 
-font-size : <절대크기> | <상대크기> | <크기> | <백분율>
-단위
-em	==> 반응형 웹을 할때 사용하므로 중요
-ex	==> 해당 글꼴 소문자의 높이를 기준으로 크기를 조절 
-px
-pt

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>표 스타일</title>
+        <style>
+            div{
+                width: 200px;
+                height: 200px;
+            }
+            .origin{
+                border: 1px solid black;
+                perspective: 300px;
+                margin-top: 100px;
+                margin-left: 100px;
+                float: left;
+                
+            }
+            .box1{
+                background: #82cbd8;
+                transform: rotateY(45deg);
+            }
+            .box2{
+                background: blue;
+                transform: rotateX(45deg);
+                transform-origin: left top;
+            }
+            #tr1{
+                -webkit-transform-style: flat;
+                transform-style: flat;
+            }
+            #tr2{
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+            }
+           
+        </style>
+
+        <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+    </head>
+    <body>
+        <div class="origin">
+            <div class="box1" id="tr1">
+                <div class="box2"></div>
+            </div>
+        </div>
+        <div class="origin">
+            <div class="box1" id="tr2">
+                <div class="box2"></div>
+            </div>
+        </div>
+      
+    </body>
+</html>

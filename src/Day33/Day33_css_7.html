@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>표 스타일</title>
+        <style>
+            .origin{
+                width: 160px;
+                height: 240px;
+                border: 1px solid black;
+                float: left;
+                margin: 40px;
+            }
+            .rose{
+                transform: rotateZ(10deg);
+            }
+            .move1{
+                transform-origin: left top;
+            }
+            .move2{
+                transform-origin: right top;
+            }
+            .move3{
+                transform-origin: left bottom;
+            }
+            .move4{
+                transform-origin: right bottom;
+            }
+           
+        </style>
+
+        <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+    </head>
+    <body>
+        <div class="origin">
+            <div class="move1">
+                <img src="images/rose.jpg" class="rose">
+            </div>
+        </div>
+        <div class="origin">
+            <div class="move2">
+                <img src="images/rose.jpg" class="rose">
+            </div>
+        </div>
+        <div class="origin">
+            <div class="move3">
+                <img src="images/rose.jpg" class="rose">
+            </div>
+        </div>
+        <div class="origin">
+            <div class="move4">
+                <img src="images/rose.jpg" class="rose">
+            </div>
+        </div>
+    </body>
+</html>

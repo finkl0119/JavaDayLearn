@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>표 스타일</title>
+        <style>
+            .origin{
+                width: 210px;
+                height: 200px;
+                border: 1px solid black;
+                float: left;
+                margin: 56px;
+                perspective: 200px;
+            }
+            .movex{
+                transform: rotateX(45deg);
+            }
+            .movey{
+                transform: rotateY(45deg);
+            }
+            .movez{
+                transform: rotateZ(45deg);
+            }
+            .movexyz{
+                transform: rotate3d(2.5, 1.2, -1.5, 45deg);
+            }
+        </style>
+
+        <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+    </head>
+    <body>
+        <div class="origin">
+            <div class="movex">
+                <img src="images/fruit.jpg">
+            </div>
+        </div>
+        <div class="origin">
+            <div class="movey">
+                <img src="images/fruit.jpg">
+            </div>
+        </div>
+        <div class="origin">
+            <div class="movez">
+                <img src="images/fruit.jpg">
+            </div>
+        </div>
+        <div class="origin">
+            <div class="movexyz">
+                <img src="images/fruit.jpg">
+            </div>
+        </div>
+    </body>
+</html>
