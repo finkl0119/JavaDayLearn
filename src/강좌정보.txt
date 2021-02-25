@@ -22,3 +22,28 @@
 * Quiz	
 https://ncs.go.kr/unity/th03/ncsSearchMain.do
 
+** CSS교재
+https://github.com/kyrieko/html5-book-7
+
+https://www.dothome.co.kr/web/free/complete.php
+dbgudals1!
+
+** 파일질라
+finkl0119.dothome.co.kr
+finkl0119
+dbgudals1!
+포트 21
+
+** MYSQL
+https://dev.mysql.com/downloads/windows/installer/
+
+=> 관리자 CMD 
+SETX PATH "%PATH%;C:\Program Files\MySQL\MySQL Server 8.0\bin" /M
+
+=> 더미 데이터 삽입
+mysql> source employees.sql;
+
+
+
+
+

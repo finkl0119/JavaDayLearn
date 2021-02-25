@@ -1,0 +1,24 @@
+** 34일차 **
+
+@media screen and (min-width:200px) and (max-width : 360px)
+
+and 조건을 계속추가
+, 동일한 스타일 유형을 추가
+only 미디어 쿼리를 지원하는 웹 브라우저에게만 조건을 인식
+not 다음에 지정하는 미디어 유형 제외
+
+aspect-ratio - 화면비율(width 값 / height 값)
+min-aspect-ratio - 최소 화면 비율
+max-aspect-ratio - 최대 화면 비율
+
+device-aspect-ratio - 단말기 화면비율(width 값 / height 값)
+min-device-aspect-ratio - 단말기 최소 화면 비율
+max-device-aspect-ratio - 단말기 최대 화면 비율
+
+@media all and (device-aspect-ratio : 16/9)
+color : 비트수
+min-color : 최소 비트수
+max-color : 최대 비트수
+
+<link rel="stylesheet" media="screen and (max-width:768)" href="css/tablet.css">
+@import url("css/tablet.css") onlt screen and (min-width:321px) and (max-width:768px);
