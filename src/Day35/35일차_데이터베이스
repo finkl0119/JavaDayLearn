@@ -1,0 +1,17 @@
+** 35일차 **
+
+함수					설명
+AVG()				평균
+MIN()				최소값
+MAX()				최대값
+COUNT()				갯수
+COUNT(DISTINCT)		중복은 1개만 인정한 갯수
+STDEV()				표준편차
+VAR_SAMP()			분산
+
+DDL
+create, drop, alter, truncate, rollback, commit
+DML
+select, insert, delete, update 
+DCL
+grant, revoke, deny
