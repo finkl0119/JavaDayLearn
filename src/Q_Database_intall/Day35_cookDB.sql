@@ -216,5 +216,50 @@ insert into memebertbl values('DJM', '동짜몽', '일본')
 select * from membertbl;
 
 
+/*1번*/
+SELECT 
+	UT.userID
+	,UT.userName
+	,BT.prodName
+	,UT.addr
+	,CONCAT(UT.mobile1, UT.mobile2) AS '연락처'
+FROM usertbl UT
+INNER JOIN buytbl BT
+	ON UT.userID = BT.userID;
+
+
+/*2번*/
+SELECT 
+	UT.userID
+	,UT.userName
+	,BT.prodName
+	,UT.addr
+FROM usertbl UT
+INNER JOIN buytbl BT
+	ON UT.userID = BT.userID
+WHERE UT.userName = '김용만' 
+		AND BT.prodName = '모니터';
+
+/*3번*/
+SELECT 
+	UT.userID
+	,UT.userName
+	,BT.prodName
+	,UT.addr
+	,CONCAT(UT.mobile1, UT.mobile2) AS '연락처'
+FROM usertbl UT
+INNER JOIN buytbl BT
+	ON UT.userID = BT.userID
+ORDER BY UT.userID;
+
+/*4번*/
+SELECT 
+	UT.userID
+	,UT.userName
+	,UT.addr
+FROM usertbl UT
+INNER JOIN buytbl BT
+	ON UT.userID = BT.userID
+GROUP BY UT.userName;
 
 

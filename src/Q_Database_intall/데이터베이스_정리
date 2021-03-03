@@ -8,6 +8,20 @@
 5. 응용프로그램 제작 및 수정 용이
 6. 데이터 안전성 향상
 
+SQL 쿼리문
+추가
+INSERT INTO 테이블 VALUES(각 속성의 값);
+삭제
+DELETE FROM 테이블 (WHERE 절);
+수정
+UPDATE 테이블 SET 바뀌는 속성 = 값(WHERE 절);
+검색
+SELECT 속성 FROM 테이블
+(WHERE 절);
+SELECT 속성 FROM 테이블
+(GROUP BY 또는 (HAVING절))
+(ORDER BY);
+
 === 함수					설명
 	AVG()				평균
 	MIN()				최소값
@@ -17,9 +31,54 @@
 	STDEV()				표준편차
 	VAR_SAMP()			분산
 
+
 DDL
 create, drop, alter, truncate, rollback, commit
 DML
 select, insert, delete, update 
 DCL
 grant, revoke, deny
+
+** 데이터 형식
+CHAR(n)				고정길이 문자형
+VACHAR(n)			가별길이 문자형
+BINARY(n)			고정길이 이진데이터값
+VARBINARY(n)		가별길이 이진데이터값
+TINYTEXT			작은 text 데이터값
+TEXT				text 데이터 값
+MEDIUMTEXT			중간 text 데이터 값
+LONGTEXT			큰 text 데이터 값(최대 4GB 저장가능)
+TINYBLOB			작은 blob 데이터 값
+BLOB				blob 데이터 값
+MEDIUMBLOB			중간 blob 데이터 값
+LONGBLOB			큰 blob 데이터 값 (최대 4GB 저장가능)
+ENUM				열거형 데이터 값
+SET					최대 64개의 서로 다른 데이터 값 저장
+--------------------------------------------------------------
+DATE
+TIME
+DATETIME
+TIMESTAMP
+YEAR
+
+JSON
+--------------------------------------------------------------
+데이터형식			바이트		설명
+BIT(N)			N/8			1~64bit 표현 / b'0000'형식으로 저장
+TINYINT			1			정수 저장
+BOOL						
+BOOLEAN			1			정수 저장 / TINYINT(1)과 동일 / 0-FALSE 그외-TRUE
+SMALLINT		2			정수 저장
+MEDIUMINT		3
+INT				
+INTEGER			4			정수 저장
+BIGINT			8			정수 저장
+FLOAT			4			소수점 이하 7자리
+DOUBLE			
+REAL			8			소수점 이하 15자리
+
+** 조인 
+2개 이상의 테이블을 묶어서 하나의 결과 테이블을 만드는 것
+1. 내부조인 (INNER JOIN)
+
+
