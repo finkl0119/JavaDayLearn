@@ -79,6 +79,31 @@ REAL			8			소수점 이하 15자리
 
 ** 조인 
 2개 이상의 테이블을 묶어서 하나의 결과 테이블을 만드는 것
+
 1. 내부조인 (INNER JOIN)
+2. 외부조인
+	조인 조건을 만족하지 않는 행까지 포함하여 출력하는 조인
+	
 
 
+DELIMITER $$
+CREATE PROCEDURE 스토어드 프로시저 이름()
+BEGIN 
+	이곳에 SQL 프로그래밍 코딩
+END$$
+DELIMITER ;
+
+CALL 스토어드프로시저 이름();
+
+IF<불표현식> THEN 
+	SQL 문자들
+ELSE 
+	SQL 문자들
+END IF;
+	
+** 제약조건
+1. 기본키 제약조건
+2. 외래키, 제약조건
+3. UNIGQE 제약조건
+4. DEFAULT 제약조건
+5. NULL값 허용 제약조건
