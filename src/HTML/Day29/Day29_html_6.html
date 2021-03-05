@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>표 만들기</title>
+        <style>
+           .subm{
+               display: block;
+               background-color: #fff;
+               border: 1px solid #dedede;
+               cursor: pointer;
+               padding: 5px 10px 6px 7px;
+           }
+           .subm img{
+               border: 0;
+               padding: 0;
+               width: 16px;
+               height: 16px;
+           }
+           .subm:hover{
+               background-color: #e6efc2;
+               border: 1px solid #c6d880;
+               color: #529215;
+           }
+        </style>
+    </head>
+    <body>
+        <!-- result.value=parseInt(num1,value) + parseInt(num2.value) 자바스크립트 -->
+       <form oninput="result.value=parseInt(num1,value) + parseInt(num2.value)">
+            <input type="number" name="num1" value="0">
+            + <input type="number" name="num2" value="0">
+            = <output type="number"  name="result" for="num" value="0"></output>
+            <button type="submit" class="subm">
+                <img src="images/tick.png" alt=""> 전송하기
+            </button>   
+        </form>
+    </body>
+</html>

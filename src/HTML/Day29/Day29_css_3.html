@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>내부 스타일 시트</title>
+        <style>
+             @import url('https://fonts.googleapis.com/css2?family=Ballet&family=Nanum+Gothic&display=swap');
+           .box{
+               position: absolute;
+               left: 50px;
+               top: 70px;
+               width: 100px;
+               height: 60px;
+               background: #fff;
+               border: 2px solid green;
+               text-align: center;
+               line-height: 60px;
+           }
+
+           .box:hover{
+               -webkit-transform: rotate(15deg);
+               -moz-transform: rotate(15deg);
+               -o-transform: rotate(15deg);
+               -ms-transform: rotate(15deg);
+           }
+           .ngfont{
+                font-family: 'Ballet', cursive;
+           }
+           
+           @font-face {
+               font-family: 'trana';
+               src: local('trana'),
+                    url('trana.eot'),
+                    url('trana.woff') format('woff'),
+                    url('css/font/trana.ttf') format('truetype');
+           }
+           .wfont{
+               font-family: 'trana', sans-serif;
+           }
+           p{
+               font-size: 30px;
+               font-style: normal;
+           }
+           @font-face {
+            font-family: 'babo';
+               src: local('DXSeNB-KSCpc-EUC-H'),
+                    url('css/font/DXSeNB-KSCpc-EUC-H.ttf') format('truetype');
+            }
+            .babo{
+                font-family: 'babo';
+            }
+
+            .emsize{
+                font-size: 3em;
+            }
+            
+            .accent{
+                font-variant: small-caps;
+                font-weight: bold;
+            }
+            p#txttt{
+                font-style: italic;
+            }
+        </style>
+
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="box">마우스 오버</div> <br><br><br><br><br><br>
+        
+        <p class="ngfont">구글 폰트 웹 폰트 사용</p>
+        <p class="wfont">로컬 내 폰트 </p>
+        <p class="babo">네이버 로컬 폰트 사용</p>
+        <p class="emsize">3em을 가진 크기</p>
+
+        <p><span class="accent">시드니</span>, 호주</p>
+        <p><span class="accent">리우데자네이주</span>, 브라질</p>
+        <p><span class="accent">나폴리</span>, 이탈리아</p>
+
+        <p id="txttt">나폴리, 이탈리아</p>
+    </body>
+</html>

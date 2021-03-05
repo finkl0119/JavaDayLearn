@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>표 스타일</title>
+        <style>
+            .box1{
+                margin-top: 50px;
+                margin-left: 100px;
+                padding: 20px;
+                height: 60px;
+                animation-name: moving;
+                animation-duration: 3s;
+                animation-direction: normal;
+                animation-iteration-count: infinite;
+                
+            }
+            @keyframes moving{
+                from{
+                    width: 200px;
+                    background: yellow;
+                    opacity: 1;
+                    transform: scale(1) rotate(0deg);
+                }
+                to{
+                    width: 400px;
+                    background: orange;
+                    opacity: 1;
+                    transform: scale(1) rotate(0deg);
+                }
+            }
+           
+            
+        </style>
+
+        <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+    </head>
+    <body>
+        <div class="box1"><h3>Css animation</h3></div>
+        
+    </body>
+</html>

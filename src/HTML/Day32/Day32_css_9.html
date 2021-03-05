@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>표 스타일</title>
+        <style>
+            ul{
+                list-style: none;
+            }
+            li{
+                width: 100px;
+                display: inline;
+                float: left;
+                margin: 10px;
+            }
+            li a{
+                padding: 5px 20px;
+                font-size: 14px;
+                color: blue;
+                text-decoration: none;
+            }
+            a[href]{
+                background: yellow;
+            }
+            a[target="_blank"]{
+                padding-right: 30px;
+                background: url(images/newwindow.png) no-repeat center right;
+            }
+            .flat{
+                background: blue;
+                color: white;
+            }
+            [class ~="button"]{
+                border: 2px solid black;
+                box-shadow: rgba(0, 0, 0, 4) 5px 5px;
+            }
+            a[title |="us"]{
+                background: url(images/us.png) no-repeat left center;
+                padding: 5px 25px;
+            }
+            a[title |="jap"]{
+                background: url(images/jp.png) no-repeat left center;
+                padding: 5px 25px;
+            }
+            a[title |="china"]{
+                background: url(images/ch.png) no-repeat left center;
+                padding: 5px 25px;
+            }
+
+
+            a[title ^="us"]{
+                background: url(images/us.png) no-repeat left center;
+                padding: 5px 25px;
+            }
+            a[title ^="jap"]{
+                background: url(images/jp.png) no-repeat left center;
+                padding: 5px 25px;
+            }
+            a[title ^="china"]{
+                background: url(images/ch.png) no-repeat left center;
+                padding: 5px 25px;
+            }
+
+            a[title $="hwp"]{
+                background: url(images/hwp_icon.gif) no-repeat left center;
+                padding-right: 25px;
+            }
+            a[title $="xls"]{
+                background: url(images/excel_icon.gif) no-repeat left center;
+                padding-right: 25px;
+            }
+            [href *="w3"]{
+                background: blue;
+                color: white;
+            }
+        </style>
+
+        <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+    </head>
+    <body>
+       <ul>
+           <li>메인메뉴</li>
+           <li><a href="#">1</a></li>
+           <li><a href="#">1</a></li>
+           <li><a href="#">1</a></li>
+           <li><a href="#">1</a></li>
+           <br>
+           <li><a href="#">#######</a></li>
+           <li><a href="http://www.w3c.org/TR/html" target="_blank">1</a></li>
+           <br>
+           <li><a href="#">#######</a></li>
+           <li><a href="#" class="button">1</a></li>
+           <li><a href="#" class="flat button">1</a></li>
+           <br>
+           <li><a href="#">#######</a></li>
+           <li><a href="#" title="us">1</a></li>
+           <li><a href="#" title="us-english">1</a></li>
+           <li><a href="#" title="japanese">1</a></li>
+           <li><a href="#" title="china-ese">1</a></li>
+           <br>
+           <li><a href="#">#######</a></li>
+           <li><a href="#" title="us">1</a></li>
+           <li><a href="#" title="us-english">1</a></li>
+           <li><a href="#" title="japanese">1</a></li>
+           <li><a href="#" title="china-ese">1</a></li>
+           <li><a href="#">#######</a></li>
+           <li><a href="intro.hwp" >1</a></li>
+           <li><a href="intro.xls" >1</a></li>
+           <li><a href="#">#######</a></li>
+           <li><a href="http://www.w3c.org/TR/html" >1</a></li>
+           <li><a href="http://www.caniuse.com" >1</a></li>
+       </ul>
+    </body>
+</html>

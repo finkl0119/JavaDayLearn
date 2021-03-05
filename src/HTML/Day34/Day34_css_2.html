@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>표 스타일</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                background-color: #eee;
+            }
+            /* 단말기의 세로 방향 */
+            @media screen and (orientation: landscape){
+                body{
+                    background-color: yellow;
+                }   
+            }
+
+            @media screen and (orientation: portrait){
+                body{
+                    background-color: red;
+                }     
+            }
+
+        </style>
+
+        <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+    </head>
+    <body>
+       <h1>미디어 쿼리</h1>
+    </body>
+</html>

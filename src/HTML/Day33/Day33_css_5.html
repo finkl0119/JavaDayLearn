@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>표 스타일</title>
+        <style>
+            .origin{
+                width: 160px;
+                height: 240px;
+                border: 1px solid black;
+                margin: 100px;
+                float: left;
+            }
+            .movex{
+                transform: skewX(30deg);
+            }
+            .movey{
+                transform: skewY(15deg);
+            }
+            .movexy{
+                transform: skew(-25deg, -15deg);
+            }
+        </style>
+
+        <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+    </head>
+    <body>
+        <div class="origin">
+            <div class="movex">
+                <img src="images/rose.jpg">
+            </div>
+        </div>
+        <div class="origin">
+            <div class="movey">
+                <img src="images/rose.jpg">
+            </div>
+        </div>
+        <div class="origin">
+            <div class="movexy">
+                <img src="images/rose.jpg">
+            </div>
+        </div>
+    </body>
+</html>

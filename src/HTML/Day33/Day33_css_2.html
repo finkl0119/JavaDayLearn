@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>표 스타일</title>
+        <style>
+            .origin{
+                width: 210px;
+                height: 200px;
+                border: 1px solid black;
+                float: left;
+                margin: 40px;
+            }
+            .movex:hover{
+                transform: scaleX(1.2);
+            }
+            .movey:hover{
+                transform: scaleY(1.5);
+            }
+            .movexy:hover{
+                transform: scale(0.7);
+            }
+        </style>
+
+        <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+    </head>
+    <body>
+        <div class="origin">
+            <div class="movex">
+                <img src="images/fruit.jpg">
+            </div>
+        </div>
+        <div class="origin">
+            <div class="movey">
+                <img src="images/fruit.jpg">
+            </div>
+        </div>
+        <div class="origin">
+            <div class="movexy">
+                <img src="images/fruit.jpg">
+            </div>
+        </div>
+    </body>
+</html>

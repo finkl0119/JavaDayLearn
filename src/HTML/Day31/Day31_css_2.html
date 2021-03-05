@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>내부 스타일 시트</title>
+        <style>
+           
+           #inline img{
+               margin: 10px;
+           }
+           #block img{
+               display: block;
+               margin: 10px;
+           }
+           #nav_1 ul{
+               list-style-type: none;
+           }
+           #nav_1 ul li{
+               display: inline;
+           }
+           #nav_1 ul li a{
+               color: black;
+               text-decoration: none;
+           }
+           #nav_2 {
+                width: 100%;
+               height: 60px;
+               background-color: #069;
+           }
+           #nav_2 ul{
+               list-style-type: none;
+           }
+           #nav_2 ul li{
+               display: inline-block;
+               margin: 20px;
+           }
+           #nav_2 ul li a{
+               color: white;
+               text-decoration: none;
+           }
+           .round {
+               border: 2px solid red;
+               border-radius: 20px;
+               display: inline-block;
+               width: 300px;
+               height: 200px;
+               display: inline-block;
+               margin: 20px;
+           }
+           #bg{
+               background: url(images/pic1.jpg) no-repeat;
+               background-size: cover;
+           }
+           div{
+               margin: 20px;
+               border: 1px solid #ccc;
+               border-radius: 5px;
+           }
+           .invisible{
+               visibility: hidden;
+           }
+
+           div#wrapper{
+               position: relative;
+           }
+           div#box{
+               position: absolute;
+               width: 100px;
+               height: 100px;
+               border: 1px solid black;
+               font-size: 26px;
+           }
+           .b1{
+               left: 50px;
+               top: 50px;
+               background: red;
+               z-index: 1;
+           }
+           .b2{
+               left: 110px;
+               top: 70px;
+               background: yellow;
+               z-index: 3;
+           }
+           .b3{
+               left: 70px;
+               top: 110px;
+               background: skyblue;
+               z-index: 1;
+           }
+        </style>
+
+        <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+    </head>
+    <body>
+        <nav id="nav_1">
+            <ul>
+                <li><a href="#">애완견종류</a></li>
+                <li><a href="#">입양하기</a></li>
+                <li><a href="#">건강돌보기</a></li>
+                <li><a href="#">더불어살기</a></li>
+            </ul>
+        </nav>
+        <nav id="nav_2">
+            <ul>
+                <li><a href="#">애완견종류</a></li>
+                <li><a href="#">입양하기</a></li>
+                <li><a href="#">건강돌보기</a></li>
+                <li><a href="#">더불어살기</a></li>
+            </ul>
+        </nav>
+        <div id="inline">
+           <img src="images/pic1.jpg">
+           <img src="images/pic2.jpg">
+           <img src="images/pic3.jpg">
+        </div>
+        <div id="block">
+            <img src="images/pic1.jpg">
+            <img src="images/pic2.jpg">
+            <img src="images/pic3.jpg">
+        </div>
+        <div class="round"></div>
+        <div class="round" id="bg"></div>
+        <br>
+        <img src="images/pic1.jpg">
+        <img src="images/pic2.jpg" class="invisible">
+        <img src="images/pic3.jpg">
+        <br>
+        <div id="wrapper">
+            <div id="box" class="b1">1</div>
+            <div id="box" class="b2">2</div>
+            <div id="box" class="b3">3</div>
+        </div>
+    </body>
+</html>

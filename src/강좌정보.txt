@@ -33,6 +33,7 @@ finkl0119.dothome.co.kr
 finkl0119
 dbgudals1!
 포트 21
+http://finkl0119.dothome.co.kr/Day30/quiz-11.html
 
 ** MYSQL
 https://dev.mysql.com/downloads/windows/installer/

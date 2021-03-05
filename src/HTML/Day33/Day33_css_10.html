@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>표 스타일</title>
+        <style>
+            h1{
+                font-size: 60px;
+            }
+            div{
+                width: 200px;
+                height: 200px;
+            }
+            .origin{
+                border: 1px solid black;
+                perspective: 300px;
+                margin-top: 100px;
+                margin-left: 100px;
+                float: left;
+                
+            }
+            .box{
+                background: #82cbd8;
+                transform: rotateY(135deg);
+            }
+            
+            #tr1{
+                backface-visibility: hidden;
+            }
+            #tr2{
+                backface-visibility: visible;
+            }
+           
+        </style>
+
+        <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+    </head>
+    <body>
+        <div class="origin">
+            <div class="box" id="tr1">
+                <h1>Back</h1>
+            </div>
+        </div>
+        <div class="origin">
+            <div class="box" id="tr2">
+                <h1>Back</h1>
+            </div>
+        </div>
+        
+      
+    </body>
+</html>

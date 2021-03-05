@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>내부 스타일 시트</title>
+        <style>
+           .box1{
+               width: 200px;
+               height: 100px;
+               background: #ff6a00;
+           }
+           .box2{
+               width: 50%;
+               height: 100px;
+               background: #0094ff;
+           }
+
+           .box3{
+               border-style: solid;
+           }
+           .box4{
+               border-style: dotted;
+           }
+           .box5{
+               border-style: dashed;
+           }
+           .box6{
+               border-style: groove;
+           }
+           .box7{
+               border-style: ridge;
+           }
+
+           .box8{
+               border-style: dashed;
+               border-color: red;
+           }
+           .box9{
+               border-style: dashed;
+               border-color: blue;
+           }
+           
+
+           .box10_1{
+               padding-bottom: 5px;
+               border-bottom: 3px solid blue;
+           }
+           .box10_2{
+               padding: 10px;
+               border: 2px dotted black;
+           }
+           
+            .round_1{
+                border-top-left-radius: 100px 50px;
+                border: 2px solid black;
+                background: #ffd800;
+            }
+            .round_2{
+                border-bottom-right-radius: 50% 30%;
+                border: 2px solid black;
+                background: #ffd800;
+            }
+            .round_3{
+            border-top-right-radius: 50px;
+            border: 2px solid black;
+                background: #ffd800;
+            }
+
+            .box11{
+                box-shadow: 2px -2px 5px 0px black;
+            }
+            .box12{
+                box-shadow: 5px -5px 15px 5px gray;
+            }
+
+            .box13{
+                margin: 30px 50px 30px 50px;
+                background: #0094ff;
+                width: 200px;
+                height: 100px;
+            }
+            .box14{
+                margin: 30px 50px;
+                background: #0094ff;
+                width: 200px;
+                height: 100px;
+            }
+            .box15{
+                margin: 50px;
+                background: #0094ff;
+                width: 200px;
+                height: 100px;
+            }
+            .box16{
+                margin: 35px 5px 10px;
+                background: #0094ff;
+                width: 200px;
+                height: 100px;
+            }
+
+            .box17{
+                margin: 0 auto;
+                background: #ff6a00;
+                width: 200px;
+                height: 300px;
+            }
+            .box18{
+                padding: 10px 30px 10px 30px;
+                background: #0094ff;
+                color: white;
+                height: auto;
+            }
+            .box19{
+                padding: 10px 30px;
+                background: #0094ff;
+                color: white;
+                height: auto;
+            }
+            .box20{
+                padding: 10px;
+                background: #0094ff;
+                color: white;
+                height: auto;
+            }
+            div{
+                margin: 15px;
+                width: 200px;
+                height: 100px;
+                display: inline-block;
+                border-width: 5px;
+                border: 2px solid;
+           }
+        </style>
+
+        <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+    </head>
+    <body>
+        <h1 class="box10_1">박스모델</h1>
+        <p class="box10_2">박스모델은 박스모델은 박스모델은 박스모델은 박스모델은 박스모델은 
+            박스모델은 박스모델은 박스모델은 박스모델은 박스모델은 박스모델은 박스모델은 박스모델은 박스모델은 
+            박스모델은 박스모델은 박스모델은 박스모델은 박스모델은 박스모델은 박스모델은 박스모델은 박스모델은</p>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <br>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+        <br>
+        <div class="box8"></div>
+        <div class="box9"></div>
+        <br>
+        <div class="round_1"></div>
+        <div class="round_2"></div>
+        <div class="round_3"></div>
+        <br>
+        <div class="box11"></div>
+        <div class="box12"></div>
+        <br>
+        <div class="box13"></div>
+        <div class="box14"></div>
+        <div class="box15"></div>
+        <div class="box16"></div>
+        <br>
+        <div class="box17"></div>
+        <br>
+        <div class="box18">패딩은 콘텐츠 영역 패딩은 콘텐츠 영역 패딩은 콘텐츠 영역 패딩은 콘텐츠 영역</div>
+        <div class="box19">패딩은 콘텐츠 영역 패딩은 콘텐츠 영역 패딩은 콘텐츠 영역 패딩은 콘텐츠 영역</div>
+        <div class="box20">패딩은 콘텐츠 영역 패딩은 콘텐츠 영역 패딩은 콘텐츠 영역 패딩은 콘텐츠 영역</div>
+    </body>
+</html>
