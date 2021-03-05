@@ -267,6 +267,7 @@ RIGHT OUTER JOIN userTbl U
 GROUP BY U.userID, U.userName
 ORDER BY SUM(B.price * B.amount) DESC;  
 
+
 -- 제약 조건(PK)
 USE cookdb;
 
@@ -308,6 +309,7 @@ ALTER TABLE usertbl
 	ADD CONSTRAINT PK_usertbl_userID
 		PRIMARY KEY (userID);
 
+		
 -- 제약조건(다중PK)		
 DROP TABLE IF EXISTS prodtbl;
 CREATE TABLE prodtbl
@@ -319,6 +321,175 @@ CREATE TABLE prodtbl
 	CONSTRAINT PK_prodtbl_prodCode_prodID
 		PRIMARY KEY (prodCode, prodID));	
 
+		
+-- 외래키 제거 및 변경 (FK)
+DROP TABLE IF EXISTS buytbl;
+CREATE TABLE buytbl
+(
+	num INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	userID CHAR(8) NOT NULL,
+	prodName CHAR(6) NOT NULL,
+	CONSTRAINT FK_usertbl_buytbl FOREIGN KEY(userID) REFERENCES usertbl(userID)	
+);
+DROP TABLE IF EXISTS buytbl;
+CREATE TABLE buytbl
+(
+	num INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	userID CHAR(8) NOT NULL,
+	prodName CHAR(6) NOT NULL
+);
+ALTER TABLE buytbl
+	ADD CONSTRAINT FK_userTBL_BUYTBL
+	FOREIGN KEY(userID) 
+	REFERENCES usertbl(userID);
+ALTER TABLE buytbl
+	DROP FOREIGN KEY FK_userTBL_BUYTBL; -- 외래키 제거
+ALTER TABLE buytbl
+	ADD CONSTRAINT FK_userTBL_BUYTBL
+	FOREIGN KEY(userID) 
+	REFERENCES usertbl(userID)
+	ON UPDATE CASCADE;
+
+-- UNIQUE 사용
+DROP TABLE IF EXISTS buytbl, usertbl;
+CREATE TABLE usertbl
+(
+	userID CHAR(8) NOT NULL PRIMARY KEY,
+	userName VARCHAR(10) NOT NULL,
+	birthYear INT NOT NULL,
+	email  CHAR(8) NULL UNIQUE
+);	
+	
+DROP TABLE IF EXISTS usertbl;
+CREATE TABLE usertbl
+(
+	userID CHAR(8) NOT NULL PRIMARY KEY,
+	userName VARCHAR(10) NOT NULL,
+	birthYear INT NOT NULL,
+	email  CHAR(8) NULL,
+	CONSTRAINT AK_email UNIQUE (email)
+);		
+
+-- NOT NULL 인 경우 DEFAULT 
+DROP TABLE IF EXISTS usertbl;
+CREATE TABLE usertbl
+(
+	userID CHAR(8) NOT NULL PRIMARY KEY,
+	userName VARCHAR(10) NOT NULL,
+	birthYear INT NOT NULL DEFAULT -1,
+	addr CHAR(2) NOT NULL DEFAULT '서울',
+	mobile1 CHAR(3) NULL,
+	mobile2 CHAR(8) NULL,
+	height SMALLINT NULL DEFAULT 170,
+	mDate DATE NULL
+);	
+		
+DROP TABLE IF EXISTS usertbl;
+CREATE TABLE usertbl
+(
+	userID CHAR(8) NOT NULL PRIMARY KEY,
+	userName VARCHAR(10) NOT NULL,
+	birthYear INT NOT NULL,
+	addr CHAR(2) NOT NULL,
+	mobile1 CHAR(3) NULL,
+	mobile2 CHAR(8) NULL,
+	height SMALLINT NULL,
+	mDate DATE NULL
+);	
+ALTER TABLE usertbl
+	ALTER COLUMN birthYear SET DEFAULT -1;
+ALTER TABLE usertbl
+	ALTER COLUMN addr SET DEFAULT '서울';
+ALTER TABLE usertbl
+	ALTER COLUMN height SET DEFAULT 170;		
+
+INSERT INTO usertbl VALUES ('YBJ', '유병재', DEFAULT, DEFAULT, '010', '12345678', DEFAULT, '2019.12.12');
+INSERT INTO usertbl(userID, userName) VALUES ('PNR', '박나래');
+INSERT INTO usertbl VALUES ('WB', '원빈',1982, '대전', '010', '98765432', 176, '2020.5.5');
+
+-- 테이블 생성 후 데이터 추가
+DROP TABLE IF EXISTS buytbl, usertbl;
+CREATE TABLE usertbl
+(
+	userID CHAR(8),
+	userName VARCHAR(10),
+	birthYear INT,
+	addr CHAR(2),
+	mobile1 CHAR(3),
+	mobile2 CHAR(8),
+	height SMALLINT,
+	mDate DATE
+);	
+CREATE TABLE buytbl
+(
+	num INT AUTO_INCREMENT PRIMARY KEY,
+	userID CHAR(8),
+	prodName CHAR(6),
+	groupName CHAR(4),
+	price INT,
+	amount SMALLINT
+);	
+
+INSERT INTO usertbl VALUES ('YJS', '유재석',1972, '서울', '010', '11111111', 178, '2008-8-8');
+INSERT INTO usertbl VALUES ('KHD', '강호동', null, '경북', '010', '22222222', 182, '2007-7-7');
+INSERT INTO usertbl VALUES ('KKJ', '김국진',1965, '서울', '010', '33333333', 171, '2006-6-6');
+INSERT INTO usertbl VALUES ('KYM', '김용만',1967, '서울', '010', '44444444', 177, '2005-5-5');
+INSERT INTO buytbl VALUES (NULL, 'KHD','운동화', NULL, 30, 2);
+INSERT INTO buytbl VALUES (NULL, 'KHD','노트북', '전자', 1000, 1);
+INSERT INTO buytbl VALUES (NULL, 'KYM','모니터', '전자', 200, 1);
+INSERT INTO buytbl VALUES (NULL, 'PSH','모니터', '전자', 200, 5);
+
+ALTER TABLE usertbl
+	ADD CONSTRAINT PK_usertbl_userID
+	PRIMARY KEY (userID);
+ALTER TABLE buytbl
+	ADD CONSTRAINT FK_usertbl_buytbl
+	FOREIGN KEY (userID)
+	REFERENCES usertbl (userID);
+	
+DELETE FROM buytbl WHERE userID = 'PSH';
+ALTER TABLE buytbl
+	ADD CONSTRAINT FK_usertbl_buytbl
+	FOREIGN KEY(userID)
+	REFERENCES usertbl(userID);
+	
+INSERT INTO buytbl VALUES (NULL, 'PSH','모니터', '전자', 200, 5);
+
+-- 모든 FK 허용
+SET FOREIGN_key_checks = 0;
+INSERT INTO buytbl VALUES(NULL, 'PSH', '모니터', '전자', 200, 5);
+INSERT INTO buytbl VALUES(NULL, 'KHD', '청바지', '의류', 50, 3);
+INSERT INTO buytbl VALUES(NULL, 'PSH', '메모리', '전자', 80, 10);
+INSERT INTO buytbl VALUES(NULL, 'KJD', '책', '서적', 15, 5);
+INSERT INTO buytbl VALUES(NULL, 'LHJ', '책', '서적', 15, 2);
+INSERT INTO buytbl VALUES(NULL, 'LHJ', '청바지', '의류', 50, 1);
+INSERT INTO buytbl VALUES(NULL, 'PSH', '운동화', NULL, 30, 2);
+INSERT INTO buytbl VALUES(NULL, 'LHJ', '책', '서적', 15, 1);
+INSERT INTO buytbl VALUES(NULL, 'PSH', '운동화', NULL, 30, 2);
+SET FOREIGN_key_checks = 1;
+
+
+ALTER TABLE usertbl
+	ADD CONSTRAINT CK_birthYear
+	CHECK (birthYear >=1900 AND birthYear <= 2021);
+
+INSERT INTO usertbl VALUES ('KJD', '김제동', 1974, '경남', NULL, NULL, 173, '2013-3-3');
+INSERT INTO usertbl VALUES ('NHS', '남희석', 1971, '충남', '016', '66666666', 180, '2017-4-4');
+INSERT INTO usertbl VALUES ('SDY', '신동엽', 1971, '경기', NULL, NULL, 176, '2008-10-10');
+INSERT INTO usertbl VALUES ('LHJ', '이휘재', 1972, '경기', '011', '88888888', 180, '2006-4-4');
+INSERT INTO usertbl VALUES ('LKK', '이경규', 1960, '경남', '018', '99999999', 170, '2004-12-12');
+INSERT INTO usertbl VALUES ('PSH', '박수홍', 1970, '서울', '010', '00000000', 183, '2012-5-5');	
+
+ALTER TABLE buytbl
+	DROP FOREIGN KEY FK_usertbl_buytbl;
+ALTER TABLE buytbl
+	ADD CONSTRAINT FK_usertbl_buytbl
+		FOREIGN KEY(userID)
+		REFERENCES usertbl(userID)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE;
+
+		
 
 
 
